@@ -8,7 +8,7 @@
       </el-radio-group>
     </t-layout-page-item>
     <t-layout-page-item>
-      <t-input placeholder="请输入内容" :size="size" v-model="vlaue" @change="change" />
+      <f-input v-model="vlaue" placeholder="请输入内容" :size="size" @change="change" />
     </t-layout-page-item>
   </t-layout-page>
 </template>

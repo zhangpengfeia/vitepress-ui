@@ -1,7 +1,15 @@
 <template>
   <t-layout-page>
     <t-layout-page-item>
-      <t-input placeholder="请输入内容" v-model="vlaue" @change="change" />
+      <f-input
+        v-model="vlaue"
+        placeholder="请输入手机号"
+        maxlength="11"
+        input-type="phone"
+        @change="change"
+      >
+        <template #prepend>手机号</template>
+      </f-input>
     </t-layout-page-item>
   </t-layout-page>
 </template>

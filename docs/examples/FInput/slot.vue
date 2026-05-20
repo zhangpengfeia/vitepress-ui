@@ -1,17 +1,17 @@
 <template>
   <t-layout-page>
     <t-layout-page-item>
-      <t-input v-model="input1" style="max-width: 600px" placeholder="Please input">
+      <f-input v-model="input1" style="max-width: 600px" placeholder="Please input">
         <template #prepend>Http://</template>
-      </t-input>
+      </f-input>
     </t-layout-page-item>
     <t-layout-page-item>
-      <t-input v-model="input2" style="max-width: 600px" placeholder="Please input">
+      <f-input v-model="input2" style="max-width: 600px" placeholder="Please input">
         <template #append>.com</template>
-      </t-input>
+      </f-input>
     </t-layout-page-item>
     <t-layout-page-item>
-      <t-input
+      <f-input
         v-model="input3"
         style="max-width: 600px"
         placeholder="Please input"
@@ -27,10 +27,10 @@
         <template #append>
           <el-button :icon="Search" />
         </template>
-      </t-input>
+      </f-input>
     </t-layout-page-item>
     <t-layout-page-item>
-      <t-input
+      <f-input
         v-model="input3"
         style="max-width: 600px"
         placeholder="Please input"
@@ -46,7 +46,7 @@
             <el-option label="Tel" value="3" />
           </el-select>
         </template>
-      </t-input>
+      </f-input>
     </t-layout-page-item>
   </t-layout-page>
 </template>

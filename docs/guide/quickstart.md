@@ -12,13 +12,13 @@ import ElementPlus from "element-plus"
 import "element-plus/dist/index.css"
 import "element-plus/theme-chalk/dark/css-vars.css"
 // import en from 'element-plus/es/locale/lang/en' // 引入element-plus语言包 en
-import zhCn from 'element-plus/es/locale/lang/zh-cn' // 引入element-plus语言包 zh-cn
-import plusZhCn from '@wocwin/t-ui-plus/locale/zh-cn' // 引入t-ui-plus语言包 zh-cn
-// import plusEn from '@wocwin/t-ui-plus/locale/en' // 引入t-ui-plus语言包 en
+import zhCn from "element-plus/es/locale/lang/zh-cn" // 引入element-plus语言包 zh-cn
+import plusZhCn from "@zhangpengfeia/ffdp-ui-plus/locale/zh-cn" // 引入ffdp-ui-plus语言包 zh-cn
+// import plusEn from '@zhangpengfeia/ffdp-ui-plus/locale/en' // 引入ffdp-ui-plus语言包 en
 // element-plus图标
 import * as ElementPlusIconsVue from "@element-plus/icons-vue"
-import TuiPlus from "@wocwin/t-ui-plus"
-import "@wocwin/t-ui-plus/index.css"
+import TuiPlus from "@zhangpengfeia/ffdp-ui-plus"
+import "@zhangpengfeia/ffdp-ui-plus/index.css"
 const app = createApp(App)
 // 注册所有图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -32,14 +32,15 @@ app.use(ElementPlus, {
 app.use(TuiPlus)
 app.mount("#app")
 ```
+
 ## 按需引入
 
 ```js
 // 在main.js中按下引入
-import '@wocwin/t-ui-plus/index.css'
+import "@zhangpengfeia/ffdp-ui-plus/index.css"
 // 单个.vue文件引入
-<script setup lang="ts">
-  import {TDetail, TForm} from "@wocwin/t-ui-plus"
+;<script setup lang="ts">
+  import {(TDetail, TForm)} from "@zhangpengfeia/ffdp-ui-plus"
 </script>
 ```
 
@@ -52,18 +53,18 @@ import '@wocwin/t-ui-plus/index.css'
 {
   "compilerOptions": {
     // ...
-    "types": ["@wocwin/t-ui-plus/index.d.ts"]
+    "types": ["@zhangpengfeia/ffdp-ui-plus/index.d.ts"]
   }
 }
 ```
 
+<!--
 ## 自动按需导入 <el-tag  effect="dark">待完善</el-tag>
-
 
 - 1. 安装插件
 
   ```sh
-  pnpm install -D unplugin-vue-components unplugin-auto-import @t-ui-plus/resolver
+  pnpm install -D unplugin-vue-components unplugin-auto-import @ffdp-ui-plus/resolver
   ```
 
 - 2.  配置 `vite.config.ts` 或者配置 `webpack(vue).config.js`
@@ -72,11 +73,11 @@ import '@wocwin/t-ui-plus/index.css'
 
   ```ts {6,16} [vite.config.ts]
   // vite.config.ts
-  import { defineConfig } from 'vite'
-  import AutoImport from 'unplugin-auto-import/vite'
-  import Components from 'unplugin-vue-components/vite'
-  import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-  import { TuiPlusResolver } from '@t-ui-plus/resolver'
+  import { defineConfig } from "vite"
+  import AutoImport from "unplugin-auto-import/vite"
+  import Components from "unplugin-vue-components/vite"
+  import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
+  import { TuiPlusResolver } from "@ffdp-ui-plus/resolver"
 
   export default defineConfig({
     // ...
@@ -94,10 +95,10 @@ import '@wocwin/t-ui-plus/index.css'
 
   ```js {5,15} [webpack.config.js]
   // webpack.config.js
-  const AutoImport = require('unplugin-auto-import/webpack')
-  const Components = require('unplugin-vue-components/webpack')
-  const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
-  const { TuiPlusResolver } = require('@t-ui-plus/resolver')
+  const AutoImport = require("unplugin-auto-import/webpack")
+  const Components = require("unplugin-vue-components/webpack")
+  const { ElementPlusResolver } = require("unplugin-vue-components/resolvers")
+  const { TuiPlusResolver } = require("@ffdp-ui-plus/resolver")
 
   module.exports = {
     // ...
@@ -115,11 +116,11 @@ import '@wocwin/t-ui-plus/index.css'
 
   ```js {6,17} [vue.config.js]
   // vue.config.js
-  const { defineConfig } = require('@vue/cli-service')
-  const AutoImport = require('unplugin-auto-import/webpack')
-  const Components = require('unplugin-vue-components/webpack')
-  const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
-  const { TuiPlusResolver } = require('@t-ui-plus/resolver')
+  const { defineConfig } = require("@vue/cli-service")
+  const AutoImport = require("unplugin-auto-import/webpack")
+  const Components = require("unplugin-vue-components/webpack")
+  const { ElementPlusResolver } = require("unplugin-vue-components/resolvers")
+  const { TuiPlusResolver } = require("@ffdp-ui-plus/resolver")
 
   module.exports = defineConfig({
     // ...
@@ -135,4 +136,4 @@ import '@wocwin/t-ui-plus/index.css'
       ]
     }
   })
-  ```
+  ``` -->

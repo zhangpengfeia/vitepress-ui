@@ -1,14 +1,14 @@
 <template>
   <t-layout-page>
     <t-layout-page-item>
-      <t-input
+      <f-input
+        v-model="vlaue"
         placeholder="请输入字母和数字"
         :input-type="/^[A-Za-z0-9]+$/"
         custom-error-tip="只能输入字母和数字"
-        v-model="vlaue"
-        :isShowErrorTip="true"
+        :is-show-error-tip="true"
         @change="change"
-      ></t-input>
+      />
     </t-layout-page-item>
   </t-layout-page>
 </template>

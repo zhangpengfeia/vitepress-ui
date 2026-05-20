@@ -1,8 +1,7 @@
 <template>
   <t-layout-page>
     <t-layout-page-item>
-      <t-input placeholder="请输入身份证号" inputType="idCard" v-model="vlaue" @change="change">
-      </t-input>
+      <f-input v-model="vlaue" placeholder="请输入身份证号" input-type="idCard" @change="change" />
     </t-layout-page-item>
   </t-layout-page>
 </template>

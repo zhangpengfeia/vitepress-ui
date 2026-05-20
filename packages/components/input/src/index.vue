@@ -5,20 +5,20 @@
       <div>{{ digitUppercase(modelValue) }}</div>
     </template>
     <el-input v-model="internalValue" v-bind="inputProps" @blur="handleBlur">
-      <template v-for="(_, name) in slots" :key="name" v-slot:[name]="data">
+      <template v-for="(_, name) in slots" :key="name" #[name]="data">
         <slot :name="name" v-bind="data" />
       </template>
-      <template #append v-if="showAppend">
+      <template v-if="showAppend" #append>
         <span v-if="inputType === 'amount'">{{ appendTitleText }}</span>
         <slot v-else name="append" />
       </template>
     </el-input>
   </el-tooltip>
   <el-input v-else v-model="internalValue" v-bind="inputProps" @blur="handleBlur">
-    <template v-for="(_, name) in slots" :key="name" v-slot:[name]="data">
+    <template v-for="(_, name) in slots" :key="name" #[name]="data">
       <slot :name="name" v-bind="data" />
     </template>
-    <template #append v-if="showAppend">
+    <template v-if="showAppend" #append>
       <span v-if="inputType === 'amount'">{{ appendTitleText }}</span>
       <slot v-else name="append" />
     </template>
@@ -29,15 +29,15 @@
 import { ElMessage } from "element-plus"
 import { computed, useSlots, useAttrs } from "vue"
 import { useLocale } from "@t-ui-plus/hooks"
-import type { TInputSelfProps as TInputProps } from "./type"
+import type { FFInputSelfProps as FFInputProps } from "./type"
 
 defineOptions({
-  name: "TInput"
+  name: "FInput"
 })
 
 const { t } = useLocale()
 const attrs = useAttrs()
-const props = withDefaults(defineProps<TInputProps>(), {
+const props = withDefaults(defineProps<FFInputProps>(), {
   modelValue: "",
   placeholder: "",
   decimalLimit: 2,
@@ -160,7 +160,7 @@ const currencyFilter = (num: number | string | null, n = 2): string => {
 const digitUppercase = (num: number | string | null): string => {
   if (!REGEX.NUMBER_DECIMAL.test(String(num))) return t("plus.input.digitUppercase")
   const isNegative = Number(num) < 0
-  let absNum = Math.abs(Number(num))
+  const absNum = Math.abs(Number(num))
   let result = ""
 
   // 小数部分

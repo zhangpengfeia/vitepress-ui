@@ -1,15 +1,7 @@
 <template>
   <t-layout-page>
     <t-layout-page-item>
-      <t-input
-        placeholder="请输入手机号"
-        maxlength="11"
-        inputType="phone"
-        v-model="vlaue"
-        @change="change"
-      >
-        <template #prepend>手机号</template>
-      </t-input>
+      <f-input v-model="vlaue" placeholder="请输入整数" input-type="integer" @change="change" />
     </t-layout-page-item>
   </t-layout-page>
 </template>
@@ -19,5 +11,6 @@ const vlaue = ref<any>()
 const change = (e: any) => {
   console.log("输出的值", e)
   console.log("v-model的值", vlaue.value)
+  console.log("v-model的值---", typeof vlaue.value)
 }
 </script>

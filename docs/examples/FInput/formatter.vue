@@ -1,8 +1,12 @@
 <template>
   <t-layout-page>
     <t-layout-page-item>
-      <t-input placeholder="请输入整数" inputType="integer" v-model="vlaue" @change="change">
-      </t-input>
+      <f-input
+        v-model="vlaue"
+        :formatter="value => `￥${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
+        :parser="value => value.replace(/\￥\s?|(,*)/g, '')"
+        @change="change"
+      />
     </t-layout-page-item>
   </t-layout-page>
 </template>
@@ -12,6 +16,5 @@ const vlaue = ref<any>()
 const change = (e: any) => {
   console.log("输出的值", e)
   console.log("v-model的值", vlaue.value)
-  console.log("v-model的值---", typeof vlaue.value)
 }
 </script>

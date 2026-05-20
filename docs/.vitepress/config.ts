@@ -3,11 +3,11 @@ import { mdPlugin } from "./plugins/mdPlugin"
 import pkg from "../../package.json"
 // 生产环境判断
 const content = [
-  "vue 版本的 t-ui-plus",
-  "vue t-ui-plus",
-  "t-ui-plus vue",
-  "TuiPlus",
-  "t-ui-plus",
+  "vue 版本的 ff-ui-plus",
+  "vue ff-ui-plus",
+  "ff-ui-plus vue",
+  "ffuiPlus",
+  "ff-ui-plus",
   "element-plus",
   "Page level components",
   "component library",
@@ -19,10 +19,10 @@ const content = [
   "vue"
 ].toString()
 export default defineConfig({
-  title: "TuiPlus基础组件文档",
+  title: "ffuiPlus基础组件文档",
   description: content,
   lang: "cn-ZH",
-  base: "/t-ui-plus/",
+  base: "/ff-ui-plus/",
   head: [
     ["meta", { name: "author", content: "wocwin" }],
     [
@@ -46,7 +46,7 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     logo: "/logo.jpg",
-    siteTitle: "TuiPlus基础组件文档",
+    siteTitle: "ffuiPlus基础组件文档",
     outline: 3,
     search: {
       provider: "local"
@@ -60,38 +60,30 @@ export default defineConfig({
       prev: "上一页",
       next: "下一页"
     },
-    socialLinks: [{ icon: "github", link: "https://github.com/wocwin/t-ui-plus" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/zhangpengfeia/vitepress-ui" }],
     nav: [
       {
         text: "安装指南",
         link: "/guide/"
       },
-      { text: "基础组件", link: "/components/TInput/base.md" },
+      { text: "基础组件", link: "/components/FInput/base.md" },
       {
         text: "GitHub地址",
-        link: "https://github.com/wocwin/t-ui-plus"
-      },
-      {
-        text: "Gitee码云地址",
-        link: "https://gitee.com/wocwin/t-ui-plus"
+        link: "https://github.com/zhangpengfeia/vitepress-ui"
       },
       {
         text: `v${pkg.version}`,
         items: [
-          {
-            text: "版本升级",
-            link: "/guide/upgrade"
-          },
-          {
-            text: "历史版本",
-            link: "https://github.com/wocwin/t-ui-plus/releases"
-          }
+          // {
+          //   text: "版本升级",
+          //   link: "/guide/upgrade"
+          // },
+          // {
+          //   text: "历史版本",
+          //   link: "https://github.com/zhangpengfeia/vitepress-ui/releases"
+          // }
         ]
       },
-      {
-        text: "演练场",
-        link: "https://wocwin.github.io/wocwin-playground/"
-      }
     ],
     sidebar: {
       "/guide/": [
@@ -123,14 +115,6 @@ export default defineConfig({
             {
               text: "国际化",
               link: "/guide/i18n"
-            },
-            {
-              text: "版本升级",
-              link: "/guide/upgrade"
-            },
-            {
-              text: "Resolver按需引入",
-              link: "/guide/resolver"
             }
           ]
         }
@@ -141,7 +125,7 @@ export default defineConfig({
           items: [
             {
               text: "输入框组件<el-tag type='danger'>v1.4.12</el-tag> ",
-              link: "/components/TInput/base.md"
+              link: "/components/FInput/base.md"
             },
             { text: "下拉选择组件", link: "/components/TSelect/base.md" },
             { text: "详情组件", link: "/components/TDetail/base.md" },

@@ -17,7 +17,7 @@ declare module '@vue/runtime-core' {
     TDatePicker: typeof import('@wocwin/t-ui-plus') ['TDatePicker']
     TChart: typeof import('@wocwin/t-ui-plus') ['TChart']
     TCheckbox: typeof import('@wocwin/t-ui-plus') ['TCheckbox']
-    TInput: typeof import('@wocwin/t-ui-plus') ['TInput']
+    FFInput: typeof import('@wocwin/t-ui-plus') ['FFInput']
     TRadio: typeof import('@wocwin/t-ui-plus') ['TRadio']
     TSelectIcon: typeof import('@wocwin/t-ui-plus') ['TSelectIcon']
     TTabs: typeof import('@wocwin/t-ui-plus') ['TTabs']

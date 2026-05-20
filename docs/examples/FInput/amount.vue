@@ -7,15 +7,14 @@
       </el-radio-group>
     </t-layout-page-item>
     <t-layout-page-item>
-      <t-input
-        placeholder="请输入金额"
-        inputType="amount"
-        showThousands
+      <f-input
         v-model="vlaue"
-        :isShowErrorTip="isShowErrorTip"
+        placeholder="请输入金额"
+        input-type="amount"
+        show-thousands
+        :is-show-error-tip="isShowErrorTip"
         @change="change"
-      >
-      </t-input>
+      />
     </t-layout-page-item>
   </t-layout-page>
 </template>
