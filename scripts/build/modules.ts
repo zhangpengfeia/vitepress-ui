@@ -101,9 +101,8 @@ const buildModules = async () => {
                 beforeWriteFile: (filePath: string, content: string) => {
                   let tempPath = filePath
                   let code = pathRewriter(content)
-                  // packages/t-ui-plus
-                  if (filePath.includes('dist/types/t-ui-plus')) {
-                    tempPath = filePath.replace('dist/types/t-ui-plus', 'dist/types')
+                  if (filePath.includes('dist/types/ff-ui-plus')) {
+                    tempPath = filePath.replace('dist/types/ff-ui-plus', 'dist/types')
                   }
                   // */style/index   */style/css
                   if (filePath.includes('style/index') || filePath.includes('style/css')) {

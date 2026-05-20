@@ -1,1 +1,1 @@
-import "@t-ui-plus/theme-chalk/src/timer-btn.scss"
+import "@ff-ui-plus/theme-chalk/src/timer-btn.scss"

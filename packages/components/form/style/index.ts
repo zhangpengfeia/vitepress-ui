@@ -1,1 +1,1 @@
-import "@t-ui-plus/theme-chalk/src/form.scss"
+import "@ff-ui-plus/theme-chalk/src/form.scss"

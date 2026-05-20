@@ -4,9 +4,9 @@ set -e
 npm run clean
 
 npm run build
-cd dist/t-ui-plus
+cd dist/ff-ui-plus
 npm publish --registry=https://registry.npmjs.org/
-echo "Successfully published t-ui-plus"
+echo "Successfully published ff-ui-plus"
 cd -
 
 cd packages/utils

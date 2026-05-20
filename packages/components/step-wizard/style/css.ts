@@ -1,1 +1,1 @@
-import "@t-ui-plus/theme-chalk/t-step-wizard.css"
+import "@ff-ui-plus/theme-chalk/t-step-wizard.css"

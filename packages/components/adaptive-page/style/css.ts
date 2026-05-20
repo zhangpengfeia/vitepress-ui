@@ -1,1 +1,1 @@
-import "@t-ui-plus/theme-chalk/t-adaptive-page.css"
+import "@ff-ui-plus/theme-chalk/t-adaptive-page.css"

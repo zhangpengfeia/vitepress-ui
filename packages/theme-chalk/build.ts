@@ -9,7 +9,7 @@ import glob from "fast-glob"
 import { copy } from "fs-extra"
 import { consola } from "consola"
 
-const pcOutput = path.resolve("../../dist/t-ui-plus")
+const pcOutput = path.resolve("../../dist/ff-ui-plus")
 
 const isDev = process.env.T_UI_PLUS_THEME_CHALK_DEV === "true"
 

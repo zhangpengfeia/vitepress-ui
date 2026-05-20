@@ -68,7 +68,7 @@ import { CopyDocument, View, CaretTop, EditPen } from "@element-plus/icons-vue"
 import { getComponent } from "../../utils/getComponent"
 import { getPlaygroundEncoded } from "../../utils"
 
-const editUrl = "https://github.com/wocwin/t-ui-plus/edit/master/docs/examples"
+const editUrl = "https://github.com/zhangpengfeia/vitepress-ui/edit/master/docs/examples"
 const editPlaygroundUrl = "https://wocwin.github.io/wocwin-playground/"
 // const editPlaygroundUrl = 'http://127.0.0.1:3332'
 

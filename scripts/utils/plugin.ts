@@ -11,7 +11,7 @@ export function TuiPlusAlias(): Plugin {
   const bundleThemeChalk = `${PKG_NAME}/${themeChalk}` as const
 
   return {
-    name: 't-ui-plus-alias-plugin',
+    name: 'ff-ui-plus-alias-plugin',
     resolveId(id) {
       if (!id.startsWith(sourceThemeChalk)) return
       return {

@@ -1,8 +1,8 @@
 {
-  "name": "@t-ui-plus/theme-chalk",
+  "name": "@ff-ui-plus/theme-chalk",
   "private": true,
   "version": "0.0.7",
-  "description": "@t-ui-plus theme-chalk",
+  "description": "@ff-ui-plus theme-chalk",
   "license": "MIT",
   "main": "index.css",
   "unpkg": "index.css",

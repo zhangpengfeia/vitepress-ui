@@ -1,8 +1,8 @@
 {
-  "name": "@wocwin/t-ui-plus",
+  "name": "@zhagnpengfeia/ff-ui-plus",
   "version": "2.0.7",
   "description": "Vue3 中基于Element-plus二次封装基础组件文档",
-  "author": "wocwin",
+  "author": "zhagnpengfeia",
   "license": "MIT",
   "private": true,
   "workspaces": {
@@ -39,7 +39,7 @@
     "@t-ui-plus/components": "workspace:*",
     "@t-ui-plus/eslint-config": "workspace:*",
     "@t-ui-plus/resolver": "workspace:*",
-    "@t-ui-plus/theme-chalk": "workspace:*",
+    "@ff-ui-plus/theme-chalk": "workspace:*",
     "@t-ui-plus/hooks": "workspace:*",
     "@t-ui-plus/locale": "workspace:*",
     "@t-ui-plus/types": "workspace:*",
@@ -127,9 +127,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wocwin/t-ui-plus.git"
+    "url": "https://github.com/zhagnpengfeia/ff-ui-plus.git"
   },
-  "homepage": "https://wocwin.github.io/t-ui-plus/",
+  "homepage": "https://zhagnpengfeia.github.io/ff-ui-plus/",
   "keywords": [
     "element-ui",
     "element-plus",
@@ -138,8 +138,8 @@
     "vitepress",
     "vue",
     "vue3",
-    "t-ui",
-    "t-ui-plus",
+    "ff-ui",
+    "ff-ui-plus",
     "wocwin",
     "二次封装组件",
     "封装组件",

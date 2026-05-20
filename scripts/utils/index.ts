@@ -23,11 +23,11 @@ export function formatBundleFilename(name: string, minify?: boolean, ext?: strin
   return `${name}${minify ? '.min' : ''}.${ext}`
 }
 
-export const PKG_NAME = 't-ui-plus'
+export const PKG_NAME = 'ff-ui-plus'
 
 export const PKG_CAMEL_CASE_NAME = 'TuiPlus'
 
-export const PKG_PREFIX = '@t-ui-plus'
+export const PKG_PREFIX = '@ff-ui-plus'
 
 export const PKG_CAMEL_CASE_LOCAL_NAME = 'TuiPlusLocale'
 
@@ -73,7 +73,7 @@ export const pathRewriter = (id: string) => {
  * @returns
  */
 export const cssResolver: any = {
-  name: 't-ui-plus-css-resolver',
+  name: 'ff-ui-plus-css-resolver',
   supports: (id: string) => id.includes('/style/css.ts') || id.includes('/style/index.ts'),
   transform: ({ id, code }: { id: string; code: string }) => {
     const tempPath = id.replaceAll('/', path.sep)

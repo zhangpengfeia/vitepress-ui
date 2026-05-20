@@ -15,8 +15,8 @@ export const utilRoot = resolve(pkgRoot, 'utils')
 /** 语言包目录 `/packages/locale`  */
 export const localesRoot = resolve(pkgRoot, 'locale')
 
-/** t-ui-plus 目录 即 `/packages/t-ui-plus` */
-export const pcRoot = resolve(pkgRoot, 't-ui-plus')
+/** ff-ui-plus 目录 即 `/packages/ff-ui-plus` */
+export const pcRoot = resolve(pkgRoot, 'ff-ui-plus')
 
 /** Docs */
 export const docsDirName = 'docs'
@@ -25,8 +25,8 @@ export const vpRoot = resolve(docRoot, '.vitepress')
 
 /** `/dist` */
 export const buildOutput = resolve(projRoot, 'dist')
-/** `/dist/t-ui-plus` */
-export const pcOutput = resolve(buildOutput, 't-ui-plus')
+/** `/dist/ff-ui-plus` */
+export const pcOutput = resolve(buildOutput, 'ff-ui-plus')
 
 export const pcPackage = resolve(pcRoot, 'package.json')
 export const projPackage = resolve(projRoot, 'package.json')

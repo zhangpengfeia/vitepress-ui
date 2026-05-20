@@ -1,1 +1,1 @@
-import "@t-ui-plus/theme-chalk/t-input.css"
+import "@ff-ui-plus/theme-chalk/t-input.css"

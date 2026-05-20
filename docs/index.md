@@ -1,17 +1,17 @@
 ---
 layout: home
 
-title: FFdp-ui-plus
+title: FF-ui-plus
 # titleTemplate: 选项卡描述
 editLink: true
 lastUpdated: true
 hero:
-  name: FFdp-ui-plus
+  name: ff-ui-plus
   text: vue3基础组件
   tagline: Vue3 中基于 Element-plus 二次封装基础组件文档
   image:
     src: /img/hero.jpg
-    alt: ffdp-ui-plus
+    alt: ff-ui-plus
   actions:
     - theme: brand
       text: 安装指南

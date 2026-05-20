@@ -13,12 +13,12 @@ import "element-plus/dist/index.css"
 import "element-plus/theme-chalk/dark/css-vars.css"
 // import en from 'element-plus/es/locale/lang/en' // 引入element-plus语言包 en
 import zhCn from "element-plus/es/locale/lang/zh-cn" // 引入element-plus语言包 zh-cn
-import plusZhCn from "@zhangpengfeia/ffdp-ui-plus/locale/zh-cn" // 引入ffdp-ui-plus语言包 zh-cn
-// import plusEn from '@zhangpengfeia/ffdp-ui-plus/locale/en' // 引入ffdp-ui-plus语言包 en
+import plusZhCn from "@zhangpengfeia/ff-ui-plus/locale/zh-cn" // 引入ff-ui-plus语言包 zh-cn
+// import plusEn from '@zhangpengfeia/ff-ui-plus/locale/en' // 引入ff-ui-plus语言包 en
 // element-plus图标
 import * as ElementPlusIconsVue from "@element-plus/icons-vue"
-import TuiPlus from "@zhangpengfeia/ffdp-ui-plus"
-import "@zhangpengfeia/ffdp-ui-plus/index.css"
+import TuiPlus from "@zhangpengfeia/ff-ui-plus"
+import "@zhangpengfeia/ff-ui-plus/index.css"
 const app = createApp(App)
 // 注册所有图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -37,10 +37,10 @@ app.mount("#app")
 
 ```js
 // 在main.js中按下引入
-import "@zhangpengfeia/ffdp-ui-plus/index.css"
+import "@zhangpengfeia/ff-ui-plus/index.css"
 // 单个.vue文件引入
 ;<script setup lang="ts">
-  import {(TDetail, TForm)} from "@zhangpengfeia/ffdp-ui-plus"
+  import {(TDetail, TForm)} from "@zhangpengfeia/ff-ui-plus"
 </script>
 ```
 
@@ -53,7 +53,7 @@ import "@zhangpengfeia/ffdp-ui-plus/index.css"
 {
   "compilerOptions": {
     // ...
-    "types": ["@zhangpengfeia/ffdp-ui-plus/index.d.ts"]
+    "types": ["@zhangpengfeia/ff-ui-plus/index.d.ts"]
   }
 }
 ```
@@ -64,7 +64,7 @@ import "@zhangpengfeia/ffdp-ui-plus/index.css"
 - 1. 安装插件
 
   ```sh
-  pnpm install -D unplugin-vue-components unplugin-auto-import @ffdp-ui-plus/resolver
+  pnpm install -D unplugin-vue-components unplugin-auto-import @ff-ui-plus/resolver
   ```
 
 - 2.  配置 `vite.config.ts` 或者配置 `webpack(vue).config.js`
@@ -77,7 +77,7 @@ import "@zhangpengfeia/ffdp-ui-plus/index.css"
   import AutoImport from "unplugin-auto-import/vite"
   import Components from "unplugin-vue-components/vite"
   import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
-  import { TuiPlusResolver } from "@ffdp-ui-plus/resolver"
+  import { TuiPlusResolver } from "@ff-ui-plus/resolver"
 
   export default defineConfig({
     // ...
@@ -98,7 +98,7 @@ import "@zhangpengfeia/ffdp-ui-plus/index.css"
   const AutoImport = require("unplugin-auto-import/webpack")
   const Components = require("unplugin-vue-components/webpack")
   const { ElementPlusResolver } = require("unplugin-vue-components/resolvers")
-  const { TuiPlusResolver } = require("@ffdp-ui-plus/resolver")
+  const { TuiPlusResolver } = require("@ff-ui-plus/resolver")
 
   module.exports = {
     // ...
@@ -120,7 +120,7 @@ import "@zhangpengfeia/ffdp-ui-plus/index.css"
   const AutoImport = require("unplugin-auto-import/webpack")
   const Components = require("unplugin-vue-components/webpack")
   const { ElementPlusResolver } = require("unplugin-vue-components/resolvers")
-  const { TuiPlusResolver } = require("@ffdp-ui-plus/resolver")
+  const { TuiPlusResolver } = require("@ff-ui-plus/resolver")
 
   module.exports = defineConfig({
     // ...

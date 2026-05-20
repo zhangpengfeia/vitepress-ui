@@ -1,1 +1,1 @@
-import "@t-ui-plus/theme-chalk/t-layout-page-item.css"
+import "@ff-ui-plus/theme-chalk/t-layout-page-item.css"
