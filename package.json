@@ -4,7 +4,7 @@
   "description": "Vue3 中基于Element-plus二次封装基础组件文档",
   "author": "zhagnpengfeia",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "workspaces": {
     "packages": [
       "packages/*",

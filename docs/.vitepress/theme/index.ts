@@ -14,7 +14,7 @@ import "highlight.js/lib/common"
 import hljsVuePlugin from "@highlightjs/vue-plugin/dist/highlightjs-vue.esm.min.js" // 引入echarts
 
 // 基于element-plus二次封装基础组件
-import TuiPlus from "../../../packages/t-ui-plus/index" // 引入t-ui-plus
+import TuiPlus from "../../../packages/ff-ui-plus/index" // 引入t-ui-plus
 // import "t-ui-plus/index.css"
 import "../../../packages/theme-chalk/src/index.scss" // 引入主题样式
 
