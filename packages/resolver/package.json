@@ -1,7 +1,7 @@
 {
-  "name": "@t-ui-plus/resolver",
+  "name": "@ff-ui-plus/resolver",
   "version": "0.0.2",
-  "description": "t-ui-plus resolver of unplugin-vue-components",
+  "description": "ff-ui-plus resolver of unplugin-vue-components",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

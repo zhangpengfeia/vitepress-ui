@@ -1,8 +1,8 @@
 {
-  "name": "@t-ui-plus/locale",
+  "name": "@ff-ui-plus/locale",
   "private": true,
   "version": "0.0.1",
-  "description": "t-ui-plus locale",
+  "description": "ff-ui-plus locale",
   "license": "MIT",
   "main": "index.ts",
   "module": "index.ts",

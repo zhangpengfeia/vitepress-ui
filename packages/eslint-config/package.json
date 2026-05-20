@@ -1,7 +1,7 @@
 {
-  "name": "@t-ui-plus/eslint-config",
+  "name": "@ff-ui-plus/eslint-config",
   "version": "0.0.2",
-  "description": "eslint config of t-ui-plus",
+  "description": "eslint config of ff-ui-plus",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

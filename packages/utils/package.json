@@ -1,7 +1,7 @@
 {
-  "name": "@t-ui-plus/utils",
+  "name": "@ff-ui-plus/utils",
   "version": "0.0.2",
-  "description": "utils of t-ui-plus",
+  "description": "utils of ff-ui-plus",
   "license": "MIT",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
