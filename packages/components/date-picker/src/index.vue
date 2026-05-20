@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import { computed, useAttrs, useSlots, watch, reactive, ref } from "vue"
 import type { TDatePickerSelfProps as TDatePickerProps } from "./type"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 defineOptions({
   name: "TDatePicker"
 })

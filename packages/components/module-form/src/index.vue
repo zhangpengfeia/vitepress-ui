@@ -5,59 +5,59 @@
       <el-page-header
         v-if="!isShowHeader && (title || titleSlot)"
         :title="title"
-        @back="back"
         :class="{
           noContent: !subTitle,
           isShowBack: isShowBack
         }"
+        @back="back"
       >
-        <template #title v-if="titleSlot">
-          <slot name="title"></slot>
+        <template v-if="titleSlot" #title>
+          <slot name="title" />
         </template>
         <template #content>
           <div class="sub_title">{{ subTitle }}</div>
           <div class="extra">
-            <slot name="extra"></slot>
+            <slot name="extra" />
           </div>
         </template>
       </el-page-header>
       <!-- 表单页面 -->
       <module-form v-if="handleType === 'edit'" v-bind="$attrs" ref="tForm">
-        <template v-for="(_index, name) in slots" v-slot:[name]="data">
-          <slot :name="name" v-bind="data"></slot>
+        <template v-for="(_index, name) in slots" #[name]="data">
+          <slot :name="name" v-bind="data" />
         </template>
       </module-form>
       <!-- 详情页面 -->
       <module-detail v-else v-bind="$attrs">
-        <template v-for="(_index, name) in slots" v-slot:[name]="data">
-          <slot :name="name" v-bind="data"></slot>
+        <template v-for="(_index, name) in slots" #[name]="data">
+          <slot :name="name" v-bind="data" />
         </template>
       </module-detail>
       <!-- tabs -->
       <div
-        class="tabs"
         v-if="tabs.length"
+        class="tabs"
         :style="{ 'margin-top': isTabMargin ? `${tabMarginNum}px` : 0 }"
       >
         <el-tabs v-if="tabs && tabs.length > 1" v-model="activeName" @tab-change="tabsChange">
           <el-tab-pane v-for="tab in tabs" :key="tab.key" :name="tab.key" :label="tab.title">
-            <slot :name="tab.key"></slot>
+            <slot :name="tab.key" />
           </el-tab-pane>
         </el-tabs>
-        <slot v-else :name="tabs && tabs[0].key"></slot>
+        <slot v-else :name="tabs && tabs[0].key" />
       </div>
-      <slot name="default"></slot>
+      <slot name="default" />
     </div>
     <!-- 按钮 -->
-    <footer class="handle_wrap" v-if="footer !== null">
+    <footer v-if="footer !== null" class="handle_wrap">
       <slot name="footer" />
       <div v-if="!slots.footer">
-        <el-button @click="back" v-bind="cancelAttrs">{{ cancelAttrs.btnTxt }}</el-button>
+        <el-button v-bind="cancelAttrs" @click="back">{{ cancelAttrs.btnTxt }}</el-button>
         <el-button
-          v-bind="saveAttrs"
           v-if="handleType === 'edit'"
-          @click="saveHandle"
+          v-bind="saveAttrs"
           :loading="loading"
+          @click="saveHandle"
           >{{ saveAttrs.btnTxt }}</el-button
         >
       </div>
@@ -67,9 +67,9 @@
 
 <script setup lang="ts">
 import { ref, useAttrs, useSlots, computed } from "vue"
-import ModuleDetail from "@t-ui-plus/components/module-form/src/moduleDetail.vue"
-import ModuleForm from "@t-ui-plus/components/module-form/src/moduleForm.vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import ModuleDetail from "@ff-ui-plus/components/module-form/src/moduleDetail.vue"
+import ModuleForm from "@ff-ui-plus/components/module-form/src/moduleForm.vue"
+import { useLocale } from "@ff-ui-plus/hooks"
 import type { TModuleFormProps } from "./type"
 defineOptions({
   name: "TModuleForm"
@@ -123,9 +123,9 @@ const emits = defineEmits(["validateError", "back", "tabsChange"])
 // 点击保存
 const saveHandle = async () => {
   return new Promise(async (resolve: any, reject: any) => {
-    let form: Record<string, any> = {}
-    let formError: Record<string, any> = {}
-    let formOpts: Record<string, any> = {}
+    const form: Record<string, any> = {}
+    const formError: Record<string, any> = {}
+    const formOpts: Record<string, any> = {}
     let successLength = 0
     loading.value = true
     try {
@@ -196,7 +196,7 @@ const tabsChange = (tab: any) => {
 }
 // 清空表单
 const resetFormFields = () => {
-  let formOpts: Record<string, any> = {}
+  const formOpts: Record<string, any> = {}
   // 过滤非插槽表单
   Object.keys(attrs.formOpts).forEach(key => {
     if (attrs.formOpts[key].opts) {
@@ -209,7 +209,7 @@ const resetFormFields = () => {
 }
 // 清空校验规则
 const clearValidate = () => {
-  let formOpts: Record<string, any> = {}
+  const formOpts: Record<string, any> = {}
   // 过滤非插槽表单
   Object.keys(attrs.formOpts).forEach(key => {
     if (attrs.formOpts[key].opts) {
@@ -221,7 +221,7 @@ const clearValidate = () => {
   })
 }
 const updateFormFields = () => {
-  let formOpts: Record<string, any> = {}
+  const formOpts: Record<string, any> = {}
   // 过滤非插槽表单
   Object.keys(attrs.formOpts).forEach(key => {
     if (attrs.formOpts[key].opts) {

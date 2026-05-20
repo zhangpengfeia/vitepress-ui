@@ -42,7 +42,7 @@
 import { computed, unref, useAttrs } from "vue"
 import type { ComputedRef } from "vue"
 import type { ComponentSize } from "element-plus/es/constants"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 defineOptions({
   name: "DensitySet"

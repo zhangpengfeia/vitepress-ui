@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { ElMessage } from "element-plus"
 import { computed, useSlots, useAttrs } from "vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 import type { FFInputSelfProps as FFInputProps } from "./type"
 
 defineOptions({

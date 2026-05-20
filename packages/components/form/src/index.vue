@@ -146,7 +146,7 @@
 import RenderComp from "./renderComp.vue"
 import RenderBtn from "./renderBtn.vue"
 import { computed, ref, watch, onMounted, getCurrentInstance } from "vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 import type { TFormSelfProps as TFormProps } from "./type"
 defineOptions({
   name: "TForm"

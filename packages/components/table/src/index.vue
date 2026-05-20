@@ -303,15 +303,15 @@ import { Rank, Edit } from "@element-plus/icons-vue"
 import { ElMessage } from "element-plus"
 import type { ComponentSize } from "element-plus/es/constants"
 import Sortable from "sortablejs"
-import TTableColumn from "@t-ui-plus/components/table/src/TTableColumn.vue"
-import SingleEditCell from "@t-ui-plus/components/table/src/singleEditCell.vue"
-import SingleEdit from "@t-ui-plus/components/table/src/singleEdit.vue"
-import ColumnSet from "@t-ui-plus/components/table/src/ColumnSet.vue"
-import RenderCol from "@t-ui-plus/components/table/src/renderCol.vue"
-import Operator from "@t-ui-plus/components/table/src/operator.vue"
-import RenderHeader from "@t-ui-plus/components/table/src/renderHeader.vue"
-import FirstColumn from "@t-ui-plus/components/table/src/firstColumn.vue"
-import DensitySet from "@t-ui-plus/components/table/src/densitySet.vue"
+import TTableColumn from "@ff-ui-plus/components/table/src/TTableColumn.vue"
+import SingleEditCell from "@ff-ui-plus/components/table/src/singleEditCell.vue"
+import SingleEdit from "@ff-ui-plus/components/table/src/singleEdit.vue"
+import ColumnSet from "@ff-ui-plus/components/table/src/ColumnSet.vue"
+import RenderCol from "@ff-ui-plus/components/table/src/renderCol.vue"
+import Operator from "@ff-ui-plus/components/table/src/operator.vue"
+import RenderHeader from "@ff-ui-plus/components/table/src/renderHeader.vue"
+import FirstColumn from "@ff-ui-plus/components/table/src/firstColumn.vue"
+import DensitySet from "@ff-ui-plus/components/table/src/densitySet.vue"
 // 虚拟滚动
 import { useVirtualized } from "./useVirtualized"
 const {
@@ -341,7 +341,7 @@ const {
 } = useExpose()
 import { tableProps } from "./tableProps"
 const props = defineProps(tableProps)
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 defineOptions({
   name: "TTable"

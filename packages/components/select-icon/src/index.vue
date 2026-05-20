@@ -51,7 +51,7 @@
 <script setup lang="ts">
 import { ref, computed, useAttrs } from "vue"
 import * as Icons from "@element-plus/icons-vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 defineOptions({
   name: "TSelectIcon"
 })

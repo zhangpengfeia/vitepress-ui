@@ -5,9 +5,9 @@ import type { Ref } from "vue"
 import { computed, ref, inject, unref, isRef } from "vue"
 import { get } from "lodash-es"
 import { localeContextKey } from "element-plus"
-// import English from '@t-ui-plus/locale/lang/en'
-import plusZhCn from "@t-ui-plus/locale/lang/zh-cn"
-import type { Language } from "@t-ui-plus/locale"
+// import English from '@ff-ui-plus/locale/lang/en'
+import plusZhCn from "@ff-ui-plus/locale/lang/zh-cn"
+import type { Language } from "@ff-ui-plus/locale"
 
 type MaybeRef<T> = T | Ref<T>
 

@@ -13,8 +13,8 @@
 import { ref, computed } from "vue"
 import en from "element-plus/es/locale/lang/en"
 import zhCn from "element-plus/es/locale/lang/zh-cn"
-import plusZhCn from "@t-ui-plus/locale/lang/zh-cn"
-import plusEn from "@t-ui-plus/locale/lang/en"
+import plusZhCn from "@ff-ui-plus/locale/lang/zh-cn"
+import plusEn from "@ff-ui-plus/locale/lang/en"
 
 const zhCnLocales = {
   ...zhCn,

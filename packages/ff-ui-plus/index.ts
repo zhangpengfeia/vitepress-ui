@@ -1,7 +1,7 @@
 import installer from "./defaults"
 
-export * from "@t-ui-plus/components"
-export * from "@t-ui-plus/types"
+export * from "@ff-ui-plus/components"
+export * from "@ff-ui-plus/types"
 
 export { version } from "./version"
 

@@ -1,6 +1,6 @@
 import type { PropType, ExtractPropTypes } from "vue"
 import type { ComponentSize } from "element-plus/es/constants"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 export const tableProps = {
   // table所需数据

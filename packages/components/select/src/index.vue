@@ -59,7 +59,7 @@
 
 <script setup lang="ts">
 import { computed, ref, useSlots, watch, onMounted } from "vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 import type { TSelectProps } from "./type"
 defineOptions({
   name: "TSelect"

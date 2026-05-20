@@ -71,7 +71,7 @@
 import { useSlots, computed } from "vue"
 import { CircleCheck } from "@element-plus/icons-vue"
 import type { TStepWizardProps } from "./type"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 defineOptions({
   name: "TStepWizard"

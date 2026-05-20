@@ -129,13 +129,13 @@
 </template>
 
 <script setup lang="ts">
-import RenderComp from "@t-ui-plus/components/query-condition/src/renderComp.vue"
-import MoreChoose from "@t-ui-plus/components/query-condition/src/moreChoose.vue"
+import RenderComp from "@ff-ui-plus/components/query-condition/src/renderComp.vue"
+import MoreChoose from "@ff-ui-plus/components/query-condition/src/moreChoose.vue"
 import { computed, ref, watch, useSlots, onMounted, reactive } from "vue"
 import { ArrowUp, ArrowDown } from "@element-plus/icons-vue"
 import type { TQueryConditionProps } from "./type"
 import { useComputed } from "./useComputed"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const {
   compChildName,
   selectListType,

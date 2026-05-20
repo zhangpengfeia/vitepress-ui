@@ -148,8 +148,8 @@
 </template>
 
 <script setup lang="ts">
-import TQueryCondition from "@t-ui-plus/components/query-condition/src/index.vue"
-import RenderCol from "@t-ui-plus/components/select-table/src/renderCol.vue"
+import TQueryCondition from "@ff-ui-plus/components/query-condition/src/index.vue"
+import RenderCol from "@ff-ui-plus/components/select-table/src/renderCol.vue"
 import {
   computed,
   useAttrs,
@@ -167,7 +167,7 @@ import { ElMessage } from "element-plus"
 import ClickOutside from "./ClickOutside"
 // 虚拟滚动
 import { useVirtualized } from "./useVirtualized"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 const {
   scrollContainerEl,

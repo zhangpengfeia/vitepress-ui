@@ -116,8 +116,8 @@
 <script setup lang="ts">
 import { computed, useAttrs } from "vue"
 import { ArrowDown } from "@element-plus/icons-vue"
-import RenderCol from "@t-ui-plus/components/table/src/renderCol.vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import RenderCol from "@ff-ui-plus/components/table/src/renderCol.vue"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 const props = defineProps({
   tableData: {

@@ -70,9 +70,9 @@
 </template>
 
 <script setup lang="tsx">
-import SingleEditCell from "@t-ui-plus/components/table/src/singleEditCell.vue"
-import RenderCol from "@t-ui-plus/components/table/src/renderCol.vue"
-import RenderHeader from "@t-ui-plus/components/table/src/renderHeader.vue"
+import SingleEditCell from "@ff-ui-plus/components/table/src/singleEditCell.vue"
+import RenderCol from "@ff-ui-plus/components/table/src/renderCol.vue"
+import RenderHeader from "@ff-ui-plus/components/table/src/renderHeader.vue"
 import { useSlots } from "vue"
 defineOptions({
   name: "TTableColumn"

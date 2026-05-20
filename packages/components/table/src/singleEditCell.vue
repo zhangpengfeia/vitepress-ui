@@ -89,7 +89,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from "vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 defineOptions({
   name: "SingleEditCell"

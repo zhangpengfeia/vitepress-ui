@@ -101,7 +101,7 @@
 
 <script setup lang="ts">
 import { computed, nextTick, ref, watch, useSlots } from "vue"
-import { useLocale } from "@t-ui-plus/hooks"
+import { useLocale } from "@ff-ui-plus/hooks"
 const { t } = useLocale()
 defineOptions({
   name: "SingleEdit"
