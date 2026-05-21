@@ -1,6 +1,9 @@
 {
   "name": "@zhangpengfeia/ff-ui-plus",
   "version": "2.0.7",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Vue3 中基于Element-plus二次封装基础组件文档",
   "author": "zhangpengfeia",
   "license": "MIT",
