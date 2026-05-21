@@ -2,7 +2,7 @@
 
 ::: warning 注意
 
-使用此组件必须:`Element-plus`版本`v2.6`以上；`@wocwin/t-ui-plus`最新版本(`v1.3.1`以上)。
+使用此组件必须:`Element-plus`版本`v2.6`以上；`@zhangpengfeia/t-ui-plus`最新版本(`v1.3.1`以上)。
 
 :::
 
@@ -42,9 +42,9 @@ TSelectTable/radioKeyup
 TSelectTable/dynamic
 :::
 
-### 单选--回显不是第一页的label<el-tag>1.4.16</el-tag>
+### 单选--回显不是第一页的 label<el-tag>1.4.16</el-tag>
 
-::: demo 需要开启`isRadioEchoLabel`（默认是开启），设置`radioSelectValLabel`，使用场景：切换分页选中提交，点击编辑时，无法回显不是第一页的数据；需要后台返回对应的keywords.label，将编辑时返回是数据赋值给radioSelectValLabel即可，若想要实现选中效果，需要在切换分页时，动态遍历当前页数据是否存在keywords.value,存在则 赋值给defaultSelectVal即可。
+::: demo 需要开启`isRadioEchoLabel`（默认是开启），设置`radioSelectValLabel`，使用场景：切换分页选中提交，点击编辑时，无法回显不是第一页的数据；需要后台返回对应的 keywords.label，将编辑时返回是数据赋值给 radioSelectValLabel 即可，若想要实现选中效果，需要在切换分页时，动态遍历当前页数据是否存在 keywords.value,存在则 赋值给 defaultSelectVal 即可。
 
 TSelectTable/radioSelectValLabel
 :::
@@ -91,8 +91,6 @@ TSelectTable/multipleDefaultSelectVal
 TSelectTable/multiple
 :::
 
-
-
 ### 开启分页功能（支持翻页选中且默认开启）
 
 :::demo `isShowPagination` 开启分页功能；`@page-change`页码改变事件;传出当前选中的页码；`table` 数据源及表头信息；`keywords` 选项中的 value（选项的值）,label(选项的标签)
@@ -101,14 +99,14 @@ TSelectTable/isShowPagination
 
 ### 复选框分页选中项回显<el-tag>1.5.2</el-tag>
 
-:::demo 赋值`state.defaultValue`能回显select框的`keywords.label`值，选中状态需要调用`selectTable`的`toggleRowSelection`方法
+:::demo 赋值`state.defaultValue`能回显 select 框的`keywords.label`值，选中状态需要调用`selectTable`的`toggleRowSelection`方法
 
 TSelectTable/restoreSelection
 :::
 
-### 是否隐藏删除icon<el-tag>1.4.14</el-tag>
+### 是否隐藏删除 icon<el-tag>1.4.14</el-tag>
 
-:::demo `multipleDisableDelete` 开启隐藏删除icon；`场景使用`：通常用于`切换分页`及`条件查询后`时，之前选中的数据不在`新数据源`下，隐藏`tag`删除icon。
+:::demo `multipleDisableDelete` 开启隐藏删除 icon；`场景使用`：通常用于`切换分页`及`条件查询后`时，之前选中的数据不在`新数据源`下，隐藏`tag`删除 icon。
 
 TSelectTable/multipleDisableDelete
 :::
@@ -150,14 +148,14 @@ TSelectTable/slotUse
 TSelectTable/isShowInput
 :::
 
-### 下拉table是否显示边框<el-tag>1.4.15</el-tag>
+### 下拉 table 是否显示边框<el-tag>1.4.15</el-tag>
 
 :::demo 设置`border`是否显示边框,默认显示。
 
 TSelectTable/border
 :::
 
-### 下拉table大小<el-tag>1.4.15</el-tag>
+### 下拉 table 大小<el-tag>1.4.15</el-tag>
 
 :::demo 设置`tableSize`，默认`''`,可选值：`''`、`large`、`default`、`small`。
 
@@ -166,13 +164,14 @@ TSelectTable/tableSize
 
 ### 远程搜索<el-tag>1.4.16</el-tag>
 
-:::demo 从服务器搜索数据，输入关键字进行查找。为了启用远程搜索，需要将filterable和remote设置为true，同时传入一个remote-method。 remote-method为一个Function，它会在输入值发生变化时调用，参数为当前输入值。
+:::demo 从服务器搜索数据，输入关键字进行查找。为了启用远程搜索，需要将 filterable 和 remote 设置为 true，同时传入一个 remote-method。 remote-method 为一个 Function，它会在输入值发生变化时调用，参数为当前输入值。
 
 TSelectTable/remoteMethod
 :::
 
-### table loading效果<el-tag>1.5.1</el-tag>
-:::demo 在`t-select-table`标签中添加`tableLoading`，loading文字设置`loadingText`
+### table loading 效果<el-tag>1.5.1</el-tag>
+
+:::demo 在`t-select-table`标签中添加`tableLoading`，loading 文字设置`loadingText`
 
 TSelectTable/tableLoading
 :::
@@ -197,7 +196,7 @@ TSelectTable/tableLoading
 
 | 参数                                               | 说明                                                                                    | 类型                                | 默认值       |
 | :------------------------------------------------- | :-------------------------------------------------------------------------------------- | :---------------------------------- | :----------- |
-| v-model:input-value                                | 输入框回显值（isShowInput为true时生效）                                                 | Array/ String/Number/Boolean/Object | -            |
+| v-model:input-value                                | 输入框回显值（isShowInput 为 true 时生效）                                              | Array/ String/Number/Boolean/Object | -            |
 | isShowInput                                        | 是否输入框显示                                                                          | Boolean                             | false        |
 | table                                              | 表格数据对象                                                                            | Object                              | {}           |
 | ---data                                            | 展示下拉数据源                                                                          | Array                               | []           |
@@ -240,19 +239,17 @@ TSelectTable/tableLoading
 | radioFixed<el-tag>1.4.13</el-tag>                  | table 是否固定单选                                                                      | Boolean                             | true         |
 | useVirtual<el-tag>1.4.13</el-tag>                  | table 是否开启虚拟滚动                                                                  | Boolean                             | false        |
 | virtualShowSize<el-tag>1.4.13</el-tag>             | 虚拟列表的渲染行数                                                                      | Number                              | 30           |
-| multipleDisableDelete<el-tag>1.4.14</el-tag>       | 多选--之前选中的数据不在新数据源下，是否隐藏`tag`删除icon                               | Boolean                             | true         |
+| multipleDisableDelete<el-tag>1.4.14</el-tag>       | 多选--之前选中的数据不在新数据源下，是否隐藏`tag`删除 icon                              | Boolean                             | true         |
 | defaultValIsOpenRadioChange<el-tag>1.4.14</el-tag> | 默认赋值--是否开启单选事件                                                              | Boolean                             | false        |
 | radioSameIsCancel<el-tag>1.4.15</el-tag>           | 单选选中同一条数据，是否取消选中                                                        | Boolean                             | true         |
 | border<el-tag>1.4.15</el-tag>                      | 下拉表格是否显示边框                                                                    | Boolean                             | true         |
 | tableSize<el-tag>1.4.15</el-tag>                   | 下拉表格大小可选值：`large`、`default`、`small`                                         | String                              | ''           |
-| radioSelectValLabel<el-tag>1.4.16</el-tag>         | 单选回显label需要动态配置defaultSelectVal 才有选中效果                                  | String                              | -            |
-| isRadioEchoLabel<el-tag>1.4.16</el-tag>            | 单选--是否开启回显label                                                                 | Boolean                             | true         |
+| radioSelectValLabel<el-tag>1.4.16</el-tag>         | 单选回显 label 需要动态配置 defaultSelectVal 才有选中效果                               | String                              | -            |
+| isRadioEchoLabel<el-tag>1.4.16</el-tag>            | 单选--是否开启回显 label                                                                | Boolean                             | true         |
 | remote<el-tag>1.4.16</el-tag>                      | 是否开启远程搜索                                                                        | Boolean                             | false        |
 | remoteMethod<el-tag>1.4.16</el-tag>                | 自定义远程搜索方法                                                                      | Function                            | 搜索输入的值 |
 | tableLoading<el-tag>1.5.1</el-tag>                 | table loading                                                                           | Boolean                             | false        |
 | loadingText<el-tag>1.5.1</el-tag>                  | table loading 文字                                                                      | String                              | '加载中...'  |
-
-
 
 ### 3、事件（events）继承 el-table 及 el-select 属性
 

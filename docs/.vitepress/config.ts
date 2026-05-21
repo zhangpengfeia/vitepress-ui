@@ -15,7 +15,7 @@ const content = [
   "ui",
   "基础组件",
   "二次封装",
-  "wocwin",
+  "zhangpengfeia",
   "vue"
 ].toString()
 export default defineConfig({
@@ -24,7 +24,7 @@ export default defineConfig({
   lang: "cn-ZH",
   base: "/ff-ui-plus/",
   head: [
-    ["meta", { name: "author", content: "wocwin" }],
+    ["meta", { name: "author", content: "zhangpengfeia" }],
     [
       "meta",
       {

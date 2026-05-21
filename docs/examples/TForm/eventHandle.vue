@@ -50,7 +50,7 @@ const nameBlur = ({ type }) => {
 const formOpts = reactive<FormTypes.FormOpts>({
   ref: null,
   formData: {
-    account: "wocwin", // *用户账号
+    account: "zhangpengfeia", // *用户账号
     password: null, // *用户密码
     name: null, // *用户昵称
     qq: null, // qq

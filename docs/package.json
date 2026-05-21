@@ -20,12 +20,12 @@
     "vue3",
     "t-ui",
     "t-ui-plus",
-    "wocwin",
+    "zhangpengfeia",
     "二次封装组件",
     "封装组件",
     "components"
   ],
-  "author": "wocwin",
+  "author": "zhangpengfeia",
   "license": "MIT",
   "devDependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
@@ -46,7 +46,7 @@
     "highlight.js": "^11.9.0",
     "js-cookie": "^3.0.5",
     "echarts": "^5.4.3",
-    "@wocwin/t-ui-plus": "npm:@wocwin/t-ui-plus@latest",
+    "@zhangpengfeia/t-ui-plus": "npm:@zhangpengfeia/t-ui-plus@latest",
     "vue": "3.4.21"
   }
 }

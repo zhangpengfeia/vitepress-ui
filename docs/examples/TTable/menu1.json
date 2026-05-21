@@ -2800,7 +2800,7 @@
           "meta": {
             "icon": "Menu",
             "title": "V3基础组件文档",
-            "isLink": "https://wocwin.github.io/t-ui-plus/",
+            "isLink": "https://zhangpengfeia.github.io/t-ui-plus/",
             "isHide": false,
             "isFull": false,
             "isAffix": false,
@@ -2819,7 +2819,7 @@
           "meta": {
             "icon": "Menu",
             "title": "GitHub 仓库",
-            "isLink": "https://github.com/wocwin/wocwin-admin",
+            "isLink": "https://github.com/zhangpengfeia/zhangpengfeia-admin",
             "isHide": false,
             "isFull": false,
             "isAffix": false,
@@ -2838,7 +2838,7 @@
           "meta": {
             "icon": "Menu",
             "title": "Gitee 仓库",
-            "isLink": "https://gitee.com/wocwin/wocwin-admin",
+            "isLink": "https://gitee.com/zhangpengfeia/zhangpengfeia-admin",
             "isHide": false,
             "isFull": false,
             "isAffix": false,
@@ -2876,7 +2876,7 @@
           "meta": {
             "icon": "Menu",
             "title": "V2基础组件文档",
-            "isLink": "https://wocwin.github.io/t-ui/",
+            "isLink": "https://zhangpengfeia.github.io/t-ui/",
             "isHide": false,
             "isFull": false,
             "isAffix": false,

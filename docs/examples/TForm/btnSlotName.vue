@@ -40,7 +40,7 @@ const formOpts = reactive<FormTypes.FormOpts>({
   ref: null,
   btnSlotName: "btnSlot", // 提交按钮插槽名称
   formData: {
-    account: "wocwin", // *用户账号
+    account: "zhangpengfeia", // *用户账号
     name: null, // *用户昵称
     valDate: null, // el日期选择范围
     email: null, // 邮箱

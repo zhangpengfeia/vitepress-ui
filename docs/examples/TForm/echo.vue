@@ -132,7 +132,7 @@ const radioChange1 = row => {
 const formOpts = reactive<FormTypes.FormOpts>({
   ref: null,
   formData: {
-    account: "wocwin", // *用户账号
+    account: "zhangpengfeia", // *用户账号
     password: null, // *用户密码
     name: null, // *用户昵称
     sex: null, // *性别: 0:男 1:女

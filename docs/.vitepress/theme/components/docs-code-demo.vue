@@ -69,7 +69,7 @@ import { getComponent } from "../../utils/getComponent"
 import { getPlaygroundEncoded } from "../../utils"
 
 const editUrl = "https://github.com/zhangpengfeia/vitepress-ui/edit/master/docs/examples"
-const editPlaygroundUrl = "https://wocwin.github.io/wocwin-playground/"
+const editPlaygroundUrl = "https://zhangpengfeia.github.io/zhangpengfeia-playground/"
 // const editPlaygroundUrl = 'http://127.0.0.1:3332'
 
 // 自动加载 asyncRouter 文件夹下所有的异步路由

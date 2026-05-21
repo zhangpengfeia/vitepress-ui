@@ -17,9 +17,9 @@
 import { computed, onMounted, reactive, ref, toRefs } from "vue"
 let state = reactive({
   queryData: {
-    userName: "wocwin", // 登录名
+    userName: "zhangpengfeia", // 登录名
     workshopNum: "W1", // 车间编号
-    email: "wocwin@163.com",
+    email: "zhangpengfeia@163.com",
     date: ["2024-10-11", "2024-10-12"],
     date2: ["2024-10-13", "2024-10-14"],
     date1: "2024-10-11"
@@ -41,12 +41,12 @@ const opts = computed(() => {
   return {
     userName: {
       label: "登录名称",
-      defaultVal: "wocwin",
+      defaultVal: "zhangpengfeia",
       comp: "el-input"
     },
     email: {
       label: "邮箱",
-      defaultVal: "wocwin@163.com",
+      defaultVal: "zhangpengfeia@163.com",
       comp: "el-input"
     },
     workshopNum: {
