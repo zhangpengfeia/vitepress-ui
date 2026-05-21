@@ -98,7 +98,7 @@ const change = (event, type, value) => {
 </script>
 <style lang="scss" scoped>
 .single_Date {
-  .t_layout_page_item {
+  .f_layout_page_item {
     // margin: 0;
     // padding: 0;
     .box_content {

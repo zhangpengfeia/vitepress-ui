@@ -123,7 +123,7 @@ const handleEditPlayground = () => {
     background-color: var(--el-bg-color-page);
     .t_module_form_demo {
       background-color: var(--el-bg-color-page);
-      :deep(.t_layout_page_item) {
+      :deep(.f_layout_page_item) {
         padding: 0;
         .t_module_form {
           overflow: hidden;

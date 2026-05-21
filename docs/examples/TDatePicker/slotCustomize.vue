@@ -44,7 +44,7 @@ const change = event => {
 </script>
 <style lang="scss" scoped>
 .slotCustomize {
-  .t_layout_page_item {
+  .f_layout_page_item {
     // margin: 0 !important;
     // padding: 0 !important;
     .box_content {

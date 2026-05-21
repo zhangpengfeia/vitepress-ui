@@ -57,7 +57,7 @@ const change = (event, type, value) => {
 </script>
 <style lang="scss" scoped>
 .dateRange {
-  .t_layout_page_item {
+  .f_layout_page_item {
     .box_content {
       display: flex;
       padding: 10px;
