@@ -1,7 +1,7 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
-      <t-chart :options="options" style="width: 100%; height: 500px">
+  <f-layout-page>
+    <f-layout-page-item>
+      <f-chart :options="options" style="width: 100%; height: 500px">
         <el-radio-group
           v-model="accessType"
           style="position: absolute; right: 10px; top: 0px"
@@ -11,9 +11,9 @@
           <el-radio-button :value="0">访问人数</el-radio-button>
           <el-radio-button :value="1">访问人次</el-radio-button>
         </el-radio-group>
-      </t-chart>
-    </t-layout-page-item>
-  </t-layout-page>
+      </f-chart>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from "vue"

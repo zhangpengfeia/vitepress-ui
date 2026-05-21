@@ -1,14 +1,14 @@
 <template>
-  <t-adaptive-page
+  <f-adaptive-page
     class="menu_mange"
     title="菜单管理页面"
     row-key="path"
-    isTree
+    is-tree
     align="left"
     :table="table"
     :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
     :columns="table.columns"
-    :isShowPagination="false"
+    :is-show-pagination="false"
     :opts="opts"
     @submit="conditionEnter"
   >
@@ -16,11 +16,11 @@
       <el-button type="primary" @click="createHandle">新增菜单</el-button>
     </template>
     <template #footer>
-      <el-dialog :title="title" width="50%" draggable v-model="addDialog">
+      <el-dialog v-model="addDialog" :title="title" width="50%" draggable>
         <t-form
           v-model="formOpts.ref"
-          :formOpts="formOpts"
-          :widthSize="2"
+          :form-opts="formOpts"
+          :width-size="2"
           @handle-event="handleEvent"
         />
         <template #footer>
@@ -31,7 +31,7 @@
         </template>
       </el-dialog>
     </template>
-  </t-adaptive-page>
+  </f-adaptive-page>
 </template>
 
 <script setup lang="tsx" name="menuMange">
@@ -460,7 +460,7 @@ const getMenuData = async () => {
   console.log(999, res)
   if (res.success) {
     table.data = res.data
-    let arr: MenuOptions[] = []
+    const arr: MenuOptions[] = []
     const menu: MenuOptions = {
       parentId: 0,
       menuId: 0,

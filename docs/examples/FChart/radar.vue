@@ -1,9 +1,9 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
-      <t-chart :options="options" style="width: 100%; height: 500px" />
-    </t-layout-page-item>
-  </t-layout-page>
+  <f-layout-page>
+    <f-layout-page-item>
+      <f-chart :options="options" style="width: 100%; height: 500px" />
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

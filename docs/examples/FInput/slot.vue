@@ -1,16 +1,16 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <f-input v-model="input1" style="max-width: 600px" placeholder="Please input">
         <template #prepend>Http://</template>
       </f-input>
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input v-model="input2" style="max-width: 600px" placeholder="Please input">
         <template #append>.com</template>
       </f-input>
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input
         v-model="input3"
         style="max-width: 600px"
@@ -28,8 +28,8 @@
           <el-button :icon="Search" />
         </template>
       </f-input>
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input
         v-model="input3"
         style="max-width: 600px"
@@ -47,8 +47,8 @@
           </el-select>
         </template>
       </f-input>
-    </t-layout-page-item>
-  </t-layout-page>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

@@ -1,16 +1,16 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <el-radio-group v-model="size" aria-label="size control" size="small">
         <el-radio-button value="large">large</el-radio-button>
         <el-radio-button value="default">default</el-radio-button>
         <el-radio-button value="small">small</el-radio-button>
       </el-radio-group>
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input v-model="vlaue" placeholder="请输入内容" :size="size" @change="change" />
-    </t-layout-page-item>
-  </t-layout-page>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

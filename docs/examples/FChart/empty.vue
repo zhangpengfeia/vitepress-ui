@@ -1,27 +1,27 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <h3>Boolean类型</h3>
       <el-button @click="isEmptyBn = !isEmptyBn">切换状态</el-button>
-      <t-chart :options="options" :isEmpty="isEmptyBn" style="width: 100%; height: 500px" />
+      <f-chart :options="options" :is-empty="isEmptyBn" style="width: 100%; height: 500px" />
       <el-button @click="addData()">增加数据</el-button>
       <h3>Function类型</h3>
-      <t-chart
+      <f-chart
         :options="options"
-        :isEmpty="isEmptyFn"
+        :is-empty="isEmptyFn"
         image="/t-ui-plus/img/hero.jpg"
         :image-size="400"
         description="empty 组件的描述信息"
         style="width: 100%; height: 500px"
       />
       <h3>空状态插槽</h3>
-      <t-chart :options="options" :isEmpty="isEmptyFn" style="width: 100%; height: 500px">
+      <f-chart :options="options" :is-empty="isEmptyFn" style="width: 100%; height: 500px">
         <template #empty>
           <div style="text-align: center; margin-top: 100px; font-size: 32px">自定义空状态插槽</div>
         </template>
-      </t-chart>
-    </t-layout-page-item>
-  </t-layout-page>
+      </f-chart>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

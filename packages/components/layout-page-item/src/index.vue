@@ -1,11 +1,11 @@
 <template>
-  <section class="t_layout_page_item" :class="{ page_item_no_margin: isNoMargin }">
+  <section class="f_layout_page_item" :class="{ page_item_no_margin: isNoMargin }">
     <slot />
   </section>
 </template>
-<script setup lang="ts" name="TLayoutPageItem">
+<script setup lang="ts" name="FLayoutPageItem">
 defineOptions({
-  name: "TLayoutPageItem"
+  name: "FLayoutPageItem"
 })
 defineProps({
   isNoMargin: {

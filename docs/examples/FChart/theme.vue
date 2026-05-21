@@ -1,15 +1,15 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <t-radio v-model="theme" :options="themeList" type="button" style="margin-bottom: 20px" />
-      <t-chart :options="options" :theme="theme" style="width: 100%; height: 500px" />
-    </t-layout-page-item>
-  </t-layout-page>
+      <f-chart :options="options" :theme="theme" style="width: 100%; height: 500px" />
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"
 const xData = (function () {
-  let data: string[] = []
+  const data: string[] = []
   for (let i = 1; i < 13; i++) {
     data.push(i + "月份")
   }

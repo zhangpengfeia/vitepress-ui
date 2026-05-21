@@ -1,4 +1,4 @@
-export interface TChartProps {
+export interface FChartProps {
   options?: Record<string, any>
   id?: string
   theme?: string

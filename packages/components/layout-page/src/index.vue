@@ -1,12 +1,12 @@
 <template>
   <div
-    ref="TLayoutPageRef"
-    class="t_layout_page"
+    ref="FLayoutPageRef"
+    class="f_layout_page"
     :class="{ layout_page_no_margin: isNoMargin }"
     @scroll="(e:any) => scrollTop = e.target.scrollTop"
   >
     <slot />
-    <div class="back_to_top" v-if="showGoTopButton">
+    <div v-if="showGoTopButton" class="back_to_top">
       <div v-if="isShowGoTopButton" @click="backToTop">
         <el-icon v-bind="{ size: 24, ...$attrs }"><CaretTop /></el-icon>
       </div>
@@ -17,16 +17,16 @@
 import { onActivated, onMounted, ref, watch } from "vue"
 import { CaretTop } from "@element-plus/icons-vue"
 defineOptions({
-  name: "TLayoutPage"
+  name: "FLayoutPage"
 })
-export interface TLayoutPageProps {
+export interface FLayoutPageProps {
   keepScrollDisabled?: boolean
   isNoMargin?: boolean
   showGoTopButton?: boolean
   scrollToTop?: number
 }
 
-const props = withDefaults(defineProps<TLayoutPageProps>(), {
+const props = withDefaults(defineProps<FLayoutPageProps>(), {
   keepScrollDisabled: false,
   isNoMargin: false,
   showGoTopButton: true,
@@ -34,7 +34,7 @@ const props = withDefaults(defineProps<TLayoutPageProps>(), {
 })
 const isShowGoTopButton = ref(false)
 
-const TLayoutPageRef = ref(null)
+const FLayoutPageRef = ref(null)
 const scrollTop = ref(0)
 watch(
   () => scrollTop.value,
@@ -48,13 +48,13 @@ watch(
 )
 const backToTop = () => {
   scrollTop.value = 0
-  ;(TLayoutPageRef.value as any).scrollTo({
+  ;(FLayoutPageRef.value as any).scrollTo({
     top: 0,
     behavior: "smooth"
   })
 }
 onMounted(() => {
-  const pageItems = (TLayoutPageRef.value as any).querySelectorAll(".t_layout_page_item")
+  const pageItems = (FLayoutPageRef.value as any).querySelectorAll(".f_layout_page_item")
   if (pageItems.length === 2) {
     pageItems[0].style.marginBottom = "8px"
   }
@@ -68,7 +68,7 @@ onMounted(() => {
 
 onActivated(() => {
   if (!props.keepScrollDisabled) {
-    ;(TLayoutPageRef.value as any).scrollTop = scrollTop
+    ;(FLayoutPageRef.value as any).scrollTop = scrollTop
   }
 })
 </script>

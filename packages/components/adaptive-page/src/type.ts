@@ -1,4 +1,4 @@
-export interface TAdaptivePageProps {
+export interface FAdaptivePageProps {
   leftWidth?: number | string
   pageStyle?: Record<string, string>
   columnSetting?: boolean

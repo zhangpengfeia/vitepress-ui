@@ -1,21 +1,23 @@
 <template>
-  <t-adaptive-page
-    class="menu_mange"
-    tableTitle="操作TTable取消复选功能"
+  <f-adaptive-page
     ref="TAdaptivePageDemo"
-    isCopy
+    class="menu_mange"
+    table-title="content插槽使用"
+    is-copy
     :table="table"
     :columns="table.columns"
     :opts="opts"
-    isShowWidthSize
-    :widthSize="3"
+    is-show-width-size
+    :width-size="3"
     @size-change="handlesSizeChange"
     @page-change="handlesCurrentChange"
     @selection-change="selectionChange"
     @submit="conditionEnter"
   >
-    <template #nickName="{ scope }">
-      <div>{{ scope.row.nickName }}</div>
+    <template #content>
+      <f-layout-page-item>
+        <div>条件查询与TTable组件之间contnet插槽</div>
+      </f-layout-page-item>
     </template>
     <template #toolbar>
       <el-button
@@ -26,7 +28,7 @@
         >取消选中</el-button
       >
     </template>
-  </t-adaptive-page>
+  </f-adaptive-page>
 </template>
 
 <script setup lang="tsx" name="selection">
@@ -95,7 +97,7 @@ const table = reactive<TableTypes.Table>({
     {
       prop: "nickName",
       label: "姓名",
-      slotName: "nickName"
+      minWidth: 120
     },
     { prop: "deptName", label: "部门", minWidth: 120 },
     { prop: "roleName", label: "角色", minWidth: 120 },

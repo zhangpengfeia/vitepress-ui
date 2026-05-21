@@ -1,14 +1,13 @@
 <template>
-  <t-adaptive-page
+  <f-adaptive-page
     class="menu_mange"
-    tableTitle="显示左侧tree结构"
-    isCopy
+    table-title="根据左侧tree结构动态切换表格头"
+    is-copy
     :table="table"
     :columns="table.columns"
     :opts="opts"
-    isShowWidthSize
-    :widthSize="2"
-    isTTableSelfFilling
+    is-show-width-size
+    :width-size="2"
     @size-change="handlesSizeChange"
     @page-change="handlesCurrentChange"
     @submit="conditionEnter"
@@ -21,16 +20,18 @@
         :props="{ children: 'children', label: 'label' }"
         default-expand-all
         :filter-node-method="filterNode"
+        @node-click="handleNodeClick"
       />
     </template>
     <template #nickName="{ scope }">
       <div>{{ scope.row.nickName }}</div>
     </template>
-  </t-adaptive-page>
+  </f-adaptive-page>
 </template>
 
-<script setup lang="tsx" name="accountManage">
+<script setup lang="tsx" name="dynamicCol">
 import { computed, onMounted, reactive, toRefs } from "vue"
+import { ElMessage } from "element-plus"
 import dataList from "./dataList.json"
 interface Tree {
   [key: string]: any
@@ -122,7 +123,7 @@ const state = reactive({
 })
 const table = reactive<TableTypes.Table>({
   currentPage: 1,
-  pageSize: 15,
+  pageSize: 10,
   total: 0,
   // 接口返回数据
   data: [],
@@ -246,5 +247,30 @@ const handlesSizeChange = (val: any) => {
 const handlesCurrentChange = (val: any) => {
   table.currentPage = val
   getData()
+}
+// 点击左侧tree树
+const handleNodeClick = (data: any) => {
+  // console.log("点击左侧tree树", data)
+  const addCol = [
+    {
+      prop: "nickName1",
+      label: "姓名1",
+      minWidth: 120
+    },
+    { prop: "deptName2", label: "部门1", minWidth: 120 }
+  ]
+  // data.id==9时 把addCol添加到table.columns中第二列，不等于时，把添加的列删除
+  if (data.id == 9) {
+    ElMessage.success("表头添加成功")
+    table.columns.splice(1, 0, ...addCol)
+  } else {
+    addCol.forEach(val => {
+      table.columns.map(item => {
+        if (item.prop == val.prop) {
+          table.columns.splice(1, 1)
+        }
+      })
+    })
+  }
 }
 </script>

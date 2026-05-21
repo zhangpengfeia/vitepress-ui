@@ -1,9 +1,9 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <f-input v-model="vlaue" placeholder="请输入身份证号" input-type="idCard" @change="change" />
-    </t-layout-page-item>
-  </t-layout-page>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

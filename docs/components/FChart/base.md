@@ -1,4 +1,4 @@
-# TChart 图表
+# FChart 图表
 
 基于 Echarts 二次封装的, 集成初始化 echarts、事件、销毁，详情配置，请参考 echarts 官方
 
@@ -20,44 +20,44 @@ app.config.globalProperties.$echarts = echarts // 全局使用
 ### 折线图
 
 :::demo 折线图
-TChart/line
+FChart/line
 :::
 
 ### 柱状图
 
 :::demo
-TChart/bar
+FChart/bar
 :::
 
 ### 饼图
 
 :::demo
-TChart/pie
+FChart/pie
 :::
 
 ### 雷达图
 
 :::demo
-TChart/radar
+FChart/radar
 :::
 
 ### 主题切换
 
 :::demo
-TChart/theme
+FChart/theme
 :::
 
 ### 空状态
 
 设置 isEmpty=true，即可显示空状态
 :::demo
-TChart/empty
+FChart/empty
 :::
 
 ### 插槽
 
 :::demo
-TChart/slot
+FChart/slot
 :::
 
 ### 2、配置参数 继承 el-empty Attributes

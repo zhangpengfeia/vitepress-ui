@@ -274,14 +274,14 @@
       ]
     },
     {
-      "path": "/t-ui-plus",
+      "path": "/f-ui-plus",
       "name": "TuiPlus",
       "parentId": 0,
       "menuId": 15,
       "orderNum": 0,
       "menuType": "M",
       "isShowLink": false,
-      "redirect": "/t-ui-plus/base",
+      "redirect": "/f-ui-plus/base",
       "meta": {
         "icon": "Tickets",
         "title": "TuiPlus综合使用",
@@ -293,7 +293,7 @@
       },
       "children": [
         {
-          "path": "/t-ui-plus/base",
+          "path": "/f-ui-plus/base",
           "name": "superDemo",
           "parentId": 15,
           "menuId": 16,
@@ -312,7 +312,7 @@
           }
         },
         {
-          "path": "/t-ui-plus/form",
+          "path": "/f-ui-plus/form",
           "name": "formDemo",
           "parentId": 15,
           "menuId": 17,
@@ -331,7 +331,7 @@
           }
         },
         {
-          "path": "/t-ui-plus/module-form",
+          "path": "/f-ui-plus/module-form",
           "name": "moduleFormDemo",
           "parentId": 15,
           "menuId": 18,
@@ -350,7 +350,7 @@
           },
           "children": [
             {
-              "path": "/t-ui-plus/module-form/edit",
+              "path": "/f-ui-plus/module-form/edit",
               "name": "moduleFormDemoEdit",
               "parentId": 18,
               "menuId": 19,
@@ -370,7 +370,7 @@
               }
             },
             {
-              "path": "/t-ui-plus/module-form/detail",
+              "path": "/f-ui-plus/module-form/detail",
               "name": "moduleFormDemoDetail",
               "parentId": 18,
               "menuId": 20,
@@ -392,14 +392,14 @@
           ]
         },
         {
-          "path": "/t-ui-plus/table",
+          "path": "/f-ui-plus/table",
           "name": "TuiPlusTableDemo",
           "parentId": 15,
           "menuId": 21,
           "orderNum": 4,
           "menuType": "M",
           "isShowLink": false,
-          "redirect": "/t-ui-plus/table/multilevelHeader",
+          "redirect": "/f-ui-plus/table/multilevelHeader",
           "meta": {
             "icon": "Menu",
             "title": "复杂Table页面",
@@ -411,7 +411,7 @@
           },
           "children": [
             {
-              "path": "/t-ui-plus/table/multilevelHeader",
+              "path": "/f-ui-plus/table/multilevelHeader",
               "name": "multilevelHeader",
               "parentId": 21,
               "menuId": 22,
@@ -431,7 +431,7 @@
               }
             },
             {
-              "path": "/t-ui-plus/table/singleEdit",
+              "path": "/f-ui-plus/table/singleEdit",
               "name": "singleEditDemo",
               "parentId": 21,
               "menuId": 23,
@@ -451,7 +451,7 @@
               }
             },
             {
-              "path": "/t-ui-plus/table/cellEdite",
+              "path": "/f-ui-plus/table/cellEdite",
               "name": "cellEditeDemo",
               "parentId": 21,
               "menuId": 24,
@@ -471,7 +471,7 @@
               }
             },
             {
-              "path": "/t-ui-plus/table/multileHeadEdit",
+              "path": "/f-ui-plus/table/multileHeadEdit",
               "name": "multileHeadEditDemo",
               "parentId": 21,
               "menuId": 25,
@@ -491,7 +491,7 @@
               }
             },
             {
-              "path": "/t-ui-plus/table/singleEditRules",
+              "path": "/f-ui-plus/table/singleEditRules",
               "name": "singleEditRulesDemo",
               "parentId": 21,
               "menuId": 26,
@@ -511,7 +511,7 @@
               }
             },
             {
-              "path": "/t-ui-plus/table/treeTable",
+              "path": "/f-ui-plus/table/treeTable",
               "name": "treeTableDemo",
               "parentId": 21,
               "menuId": 27,
@@ -2800,7 +2800,7 @@
           "meta": {
             "icon": "Menu",
             "title": "V3基础组件文档",
-            "isLink": "https://zhangpengfeia.github.io/t-ui-plus/",
+            "isLink": "https://zhangpengfeia.github.io/f-ui-plus/",
             "isHide": false,
             "isFull": false,
             "isAffix": false,

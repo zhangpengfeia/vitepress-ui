@@ -1,19 +1,19 @@
 <template>
-  <t-adaptive-page
-    class="menu_mange"
-    tableTitle="用户管理列表"
-    row-key="path"
-    isCopy
+  <f-adaptive-page
     ref="tAdaptivePageRef"
-    isExpansion
-    columnSetting
+    class="menu_mange"
+    table-title="用户管理列表"
+    row-key="path"
+    is-copy
+    is-expansion
+    column-setting
     name="userManageColumnSetting"
     :table="table"
     :columns="table.columns"
     :opts="opts"
-    isShowWidthSize
-    :tableLoading="tableLoading"
-    :widthSize="3"
+    is-show-width-size
+    :table-loading="tableLoading"
+    :width-size="3"
     @size-change="handlesSizeChange"
     @page-change="handlesCurrentChange"
     @submit="conditionEnter"
@@ -30,7 +30,7 @@
     <template #nickName="{ scope }">
       <div>{{ scope.row.nickName }}</div>
     </template>
-  </t-adaptive-page>
+  </f-adaptive-page>
 </template>
 
 <script setup lang="tsx" name="accountManage">

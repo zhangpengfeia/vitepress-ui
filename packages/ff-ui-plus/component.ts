@@ -8,16 +8,16 @@
  */
 import type { Component } from "vue"
 
-import { TAdaptivePage } from "@ff-ui-plus/components/adaptive-page"
+import { FAdaptivePage } from "@ff-ui-plus/components/adaptive-page"
 import { TButton } from "@ff-ui-plus/components/button"
-import { TChart } from "@ff-ui-plus/components/chart"
+import { FChart } from "@ff-ui-plus/components/chart"
 import { TCheckbox } from "@ff-ui-plus/components/checkbox"
 import { TDatePicker } from "@ff-ui-plus/components/date-picker"
 import { TDetail } from "@ff-ui-plus/components/detail"
 import { TForm } from "@ff-ui-plus/components/form"
 import { FInput } from "@ff-ui-plus/components/input"
-import { TLayoutPage } from "@ff-ui-plus/components/layout-page"
-import { TLayoutPageItem } from "@ff-ui-plus/components/layout-page-item"
+import { FLayoutPage } from "@ff-ui-plus/components/layout-page"
+import { FLayoutPageItem } from "@ff-ui-plus/components/layout-page-item"
 import { TModuleForm } from "@ff-ui-plus/components/module-form"
 import { TQueryCondition } from "@ff-ui-plus/components/query-condition"
 import { TRadio } from "@ff-ui-plus/components/radio"
@@ -30,16 +30,16 @@ import { TTabs } from "@ff-ui-plus/components/tabs"
 import { TTimerBtn } from "@ff-ui-plus/components/timer-btn"
 
 const plugins: Component[] = [
-  TAdaptivePage,
+  FAdaptivePage,
   TButton,
-  TChart,
+  FChart,
   TCheckbox,
   TDatePicker,
   TDetail,
   TForm,
   FInput,
-  TLayoutPage,
-  TLayoutPageItem,
+  FLayoutPage,
+  FLayoutPageItem,
   TModuleForm,
   TQueryCondition,
   TRadio,

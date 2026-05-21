@@ -1,12 +1,12 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <el-radio-group v-model="isShowErrorTip" aria-label="size control" size="small">
         <el-radio-button :value="true">开启错误提示</el-radio-button>
         <el-radio-button :value="false">关闭错误提示</el-radio-button>
       </el-radio-group>
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input
         v-model="vlaue"
         placeholder="请输入金额"
@@ -15,8 +15,8 @@
         :is-show-error-tip="isShowErrorTip"
         @change="change"
       />
-    </t-layout-page-item>
-  </t-layout-page>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

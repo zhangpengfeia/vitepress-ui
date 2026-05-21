@@ -1,12 +1,11 @@
-
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <el-button type="danger" @click="showWordLimit = !showWordLimit">{{
         `${!showWordLimit ? "显示" : "不显示"}剩余字数`
       }}</el-button>
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input
         v-model="textarea1"
         style="width: 240px"
@@ -16,8 +15,8 @@
         maxlength="10"
         placeholder="Please input"
       />
-    </t-layout-page-item>
-    <t-layout-page-item>
+    </f-layout-page-item>
+    <f-layout-page-item>
       <f-input
         v-model="textarea2"
         style="width: 240px"
@@ -27,8 +26,8 @@
         type="textarea"
         placeholder="Please input"
       />
-    </t-layout-page-item>
-  </t-layout-page>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 
 <script lang="ts" setup>

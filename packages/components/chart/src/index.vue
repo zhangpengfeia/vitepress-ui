@@ -1,10 +1,10 @@
 <template>
   <div class="t-chart" v-bind="$attrs">
-    <div v-show="!formatEmpty" class="t-chart-container" :id="id" ref="echartRef" />
+    <div v-show="!formatEmpty" :id="id" ref="echartRef" class="t-chart-container" />
     <slot v-if="formatEmpty" name="empty">
       <el-empty v-bind="$attrs" :description="description" />
     </slot>
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
@@ -22,14 +22,14 @@ import {
 } from "vue"
 import { useResizeObserver } from "@vueuse/core"
 import { debounce, toLine } from "../../utils"
-import type { TChartProps } from "./type"
+import type { FChartProps } from "./type"
 
 defineOptions({
-  name: "TChart"
+  name: "FChart"
 })
 const { proxy } = getCurrentInstance() as any
 
-const props = withDefaults(defineProps<TChartProps>(), {
+const props = withDefaults(defineProps<FChartProps>(), {
   options: () => ({}),
   id: () => Math.random().toString(36).substring(2, 8),
   theme: "",

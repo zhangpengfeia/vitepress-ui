@@ -1,8 +1,8 @@
 <template>
   <div class="t_adaptive_page">
     <div
-      :style="{ width: isShow('leftContent') ? `${leftWidth}px` : '0px' }"
       v-if="isShow('leftContent')"
+      :style="{ width: isShow('leftContent') ? `${leftWidth}px` : '0px' }"
       class="left_content"
     >
       <div class="left_tree">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <t-layout-page class="right_content" :style="pageStyle">
-      <t-layout-page-item class="table_search" :style="queryPageStyle" v-if="$attrs.opts">
+      <t-layout-page-item v-if="$attrs.opts" class="table_search" :style="queryPageStyle">
         <t-query-condition v-bind="$attrs" ref="TQueryConditionPage">
           <template v-for="(_index, name) in slots" #[name]="data">
             <slot :name="name" v-bind="data" />
@@ -25,9 +25,9 @@
       >
         <t-table
           v-bind="{ columnSetting, name, ...$attrs }"
-          :isSlotToolbar="isShow('toolbar')"
-          :isSlotTitle="isShow('title')"
           ref="TTablePage"
+          :is-slot-toolbar="isShow('toolbar')"
+          :is-slot-title="isShow('title')"
         >
           <template v-for="(_index, name) in slots" #[name]="data">
             <slot :name="name" v-bind="data" />
@@ -40,17 +40,17 @@
 </template>
 
 <script setup lang="ts">
-import TLayoutPage from "../../layout-page/src/index.vue"
-import TLayoutPageItem from "../../layout-page-item/src/index.vue"
-import TTable from "../../table/src/index.vue"
-import TQueryCondition from "../../query-condition/src/index.vue"
-import { getCurrentInstance, onMounted, ref, useSlots } from "vue"
-import type { TAdaptivePageProps } from "./type"
+import { getCurrentInstance, onMounted, ref, useSlots } from 'vue'
+import TLayoutPage from '../../layout-page/src/index.vue'
+import TLayoutPageItem from '../../layout-page-item/src/index.vue'
+import TTable from '../../table/src/index.vue'
+import TQueryCondition from '../../query-condition/src/index.vue'
+import type { FAdaptivePageProps } from "./type"
 
 defineOptions({
-  name: "TAdaptivePage"
+  name: "FAdaptivePage"
 })
-withDefaults(defineProps<TAdaptivePageProps>(), {
+withDefaults(defineProps<FAdaptivePageProps>(), {
   leftWidth: 260,
   pageStyle: () => ({}),
   columnSetting: false,

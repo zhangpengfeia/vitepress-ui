@@ -41,7 +41,7 @@ export default defineConfig({
       }
     ],
     ["meta", { name: "keywords", content }],
-    ["link", { rel: "icon", href: "./favicon.ico" }]
+    // ["link", { rel: "icon", href: "./favicon.ico" }]
   ],
   lastUpdated: true,
   themeConfig: {
@@ -145,10 +145,10 @@ export default defineConfig({
           text: "复杂组件",
           items: [
             {
-              text: "TAdaptivePage组件",
-              link: "/components/TAdaptivePage/base.md"
+              text: "FAdaptivePage组件",
+              link: "/components/FAdaptivePage/base.md"
             },
-            { text: "Chart图表组件", link: "/components/TChart/base.md" },
+            { text: "Chart图表组件", link: "/components/FChart/base.md" },
             {
               text: "下拉选择表格组件",
               link: "/components/TSelectTable/base.md"

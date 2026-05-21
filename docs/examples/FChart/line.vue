@@ -1,9 +1,9 @@
 <template>
-  <t-layout-page>
-    <t-layout-page-item>
+  <f-layout-page>
+    <f-layout-page-item>
       <el-button @click="isShow = !isShow">{{ isShow ? "隐藏" : "显示" }}</el-button>
       <el-button @click="addData()">增加数据</el-button>
-      <t-chart
+      <f-chart
         v-show="isShow"
         :options="options"
         style="width: 100%; height: 500px"
@@ -17,8 +17,8 @@
         @contextmenu="contextmenu"
         @chart="chart"
       />
-    </t-layout-page-item>
-  </t-layout-page>
+    </f-layout-page-item>
+  </f-layout-page>
 </template>
 <script setup lang="ts">
 import { ref } from "vue"

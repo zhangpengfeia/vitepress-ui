@@ -1,19 +1,19 @@
 <template>
-  <t-adaptive-page
-    class="menu_mange"
-    tableTitle="操作TTable表尾合计行"
+  <f-adaptive-page
     ref="TAdaptivePageSummary"
-    isCopy
+    class="menu_mange"
+    table-title="操作TTable表尾合计行"
+    is-copy
     :table="table"
     :columns="table.columns"
     :opts="opts"
-    isShowWidthSize
-    :widthSize="3"
-    labelWidth="140px"
-    :isShowPagination="false"
-    @submit="conditionEnter"
+    is-show-width-size
+    :width-size="3"
+    label-width="140px"
+    :is-show-pagination="false"
     show-summary
-  ></t-adaptive-page>
+    @submit="conditionEnter"
+  />
 </template>
 
 <script setup lang="ts">

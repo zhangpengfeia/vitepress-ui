@@ -1,62 +1,98 @@
 <template>
-  <t-adaptive-page
+  <f-adaptive-page
     class="menu_mange"
-    tableTitle="content插槽使用"
-    ref="TAdaptivePageDemo"
-    isCopy
+    table-title="显示左侧tree结构"
+    is-copy
     :table="table"
     :columns="table.columns"
     :opts="opts"
-    isShowWidthSize
-    :widthSize="3"
+    is-show-width-size
+    :width-size="2"
+    is-t-table-self-filling
     @size-change="handlesSizeChange"
     @page-change="handlesCurrentChange"
-    @selection-change="selectionChange"
     @submit="conditionEnter"
   >
-    <template #content>
-      <t-layout-page-item>
-        <div>条件查询与TTable组件之间contnet插槽</div>
-      </t-layout-page-item>
+    <template #leftContent>
+      <el-tree
+        ref="treeRef"
+        class="filter-tree"
+        :data="data"
+        :props="{ children: 'children', label: 'label' }"
+        default-expand-all
+        :filter-node-method="filterNode"
+      />
     </template>
-    <template #toolbar>
-      <el-button
-        size="default"
-        type="primary"
-        :disabled="state.ids.length < 1"
-        @click="cancelSelect"
-        >取消选中</el-button
-      >
+    <template #nickName="{ scope }">
+      <div>{{ scope.row.nickName }}</div>
     </template>
-  </t-adaptive-page>
+  </f-adaptive-page>
 </template>
 
-<script setup lang="tsx" name="selection">
-import { computed, onMounted, reactive, ref, toRefs } from "vue"
+<script setup lang="tsx" name="accountManage">
+import { computed, onMounted, reactive, toRefs } from "vue"
 import dataList from "./dataList.json"
-// 获取ref
-const TAdaptivePageDemo: any = ref(null)
+interface Tree {
+  [key: string]: any
+}
 const handleDelete = (row: any) => {
   console.log("点击删除", row)
 }
-// 选择复选框
-const selectionChange = (val: any) => {
-  console.log("选择复选框", val)
-  state.ids = val
+const filterNode = (value: string, data: Tree) => {
+  if (!value) return true
+  return data.label.includes(value)
 }
-// 取消选中
-const cancelSelect = () => {
-  console.log("取消选中", TAdaptivePageDemo.value)
-  if (state.ids.length > 0) {
-    console.log("取消选中222", TAdaptivePageDemo.value.TTablePage)
-    // 方式一
-    TAdaptivePageDemo.value.clearSelection()
-    // 方式二（TTablePage ref）
-    // TAdaptivePageDemo.value.TTablePage.clearSelection()
+const data: Tree[] = [
+  {
+    id: 1,
+    label: "Level one 1",
+    children: [
+      {
+        id: 4,
+        label: "Level two 1-1",
+        children: [
+          {
+            id: 9,
+            label: "Level three 1-1-1"
+          },
+          {
+            id: 10,
+            label: "Level three 1-1-2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    label: "Level one 2",
+    children: [
+      {
+        id: 5,
+        label: "Level two 2-1"
+      },
+      {
+        id: 6,
+        label: "Level two 2-2"
+      }
+    ]
+  },
+  {
+    id: 3,
+    label: "Level one 3",
+    children: [
+      {
+        id: 7,
+        label: "Level two 3-1"
+      },
+      {
+        id: 8,
+        label: "Level two 3-2"
+      }
+    ]
   }
-}
+]
 const state = reactive({
-  ids: [],
   queryData: {
     userName: null, // 登录名
     nickName: null, // 用户状态
@@ -85,7 +121,6 @@ const state = reactive({
   ]
 })
 const table = reactive<TableTypes.Table>({
-  firstColumn: { type: "selection", fixed: true },
   currentPage: 1,
   pageSize: 15,
   total: 0,
@@ -97,7 +132,7 @@ const table = reactive<TableTypes.Table>({
     {
       prop: "nickName",
       label: "姓名",
-      minWidth: 120
+      slotName: "nickName"
     },
     { prop: "deptName", label: "部门", minWidth: 120 },
     { prop: "roleName", label: "角色", minWidth: 120 },

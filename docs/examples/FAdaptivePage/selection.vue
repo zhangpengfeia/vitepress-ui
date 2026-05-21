@@ -1,99 +1,60 @@
 <template>
-  <t-adaptive-page
+  <f-adaptive-page
+    ref="TAdaptivePageDemo"
     class="menu_mange"
-    tableTitle="根据左侧tree结构动态切换表格头"
-    isCopy
+    table-title="操作TTable取消复选功能"
+    is-copy
     :table="table"
     :columns="table.columns"
     :opts="opts"
-    isShowWidthSize
-    :widthSize="2"
+    is-show-width-size
+    :width-size="3"
     @size-change="handlesSizeChange"
     @page-change="handlesCurrentChange"
+    @selection-change="selectionChange"
     @submit="conditionEnter"
   >
-    <template #leftContent>
-      <el-tree
-        ref="treeRef"
-        class="filter-tree"
-        :data="data"
-        :props="{ children: 'children', label: 'label' }"
-        default-expand-all
-        :filter-node-method="filterNode"
-        @node-click="handleNodeClick"
-      />
-    </template>
     <template #nickName="{ scope }">
       <div>{{ scope.row.nickName }}</div>
     </template>
-  </t-adaptive-page>
+    <template #toolbar>
+      <el-button
+        size="default"
+        type="primary"
+        :disabled="state.ids.length < 1"
+        @click="cancelSelect"
+        >取消选中</el-button
+      >
+    </template>
+  </f-adaptive-page>
 </template>
 
-<script setup lang="tsx" name="dynamicCol">
-import { computed, onMounted, reactive, toRefs } from "vue"
-import { ElMessage } from "element-plus"
+<script setup lang="tsx" name="selection">
+import { computed, onMounted, reactive, ref, toRefs } from "vue"
 import dataList from "./dataList.json"
-interface Tree {
-  [key: string]: any
-}
+// 获取ref
+const TAdaptivePageDemo: any = ref(null)
 const handleDelete = (row: any) => {
   console.log("点击删除", row)
 }
-const filterNode = (value: string, data: Tree) => {
-  if (!value) return true
-  return data.label.includes(value)
+// 选择复选框
+const selectionChange = (val: any) => {
+  console.log("选择复选框", val)
+  state.ids = val
 }
-const data: Tree[] = [
-  {
-    id: 1,
-    label: "Level one 1",
-    children: [
-      {
-        id: 4,
-        label: "Level two 1-1",
-        children: [
-          {
-            id: 9,
-            label: "Level three 1-1-1"
-          },
-          {
-            id: 10,
-            label: "Level three 1-1-2"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 2,
-    label: "Level one 2",
-    children: [
-      {
-        id: 5,
-        label: "Level two 2-1"
-      },
-      {
-        id: 6,
-        label: "Level two 2-2"
-      }
-    ]
-  },
-  {
-    id: 3,
-    label: "Level one 3",
-    children: [
-      {
-        id: 7,
-        label: "Level two 3-1"
-      },
-      {
-        id: 8,
-        label: "Level two 3-2"
-      }
-    ]
+// 取消选中
+const cancelSelect = () => {
+  console.log("取消选中", TAdaptivePageDemo.value)
+  if (state.ids.length > 0) {
+    console.log("取消选中222", TAdaptivePageDemo.value.TTablePage)
+    // 方式一
+    TAdaptivePageDemo.value.clearSelection()
+    // 方式二（TTablePage ref）
+    // TAdaptivePageDemo.value.TTablePage.clearSelection()
   }
-]
+}
 const state = reactive({
+  ids: [],
   queryData: {
     userName: null, // 登录名
     nickName: null, // 用户状态
@@ -122,8 +83,9 @@ const state = reactive({
   ]
 })
 const table = reactive<TableTypes.Table>({
+  firstColumn: { type: "selection", fixed: true },
   currentPage: 1,
-  pageSize: 10,
+  pageSize: 15,
   total: 0,
   // 接口返回数据
   data: [],
@@ -247,30 +209,5 @@ const handlesSizeChange = (val: any) => {
 const handlesCurrentChange = (val: any) => {
   table.currentPage = val
   getData()
-}
-// 点击左侧tree树
-const handleNodeClick = (data: any) => {
-  // console.log("点击左侧tree树", data)
-  const addCol = [
-    {
-      prop: "nickName1",
-      label: "姓名1",
-      minWidth: 120
-    },
-    { prop: "deptName2", label: "部门1", minWidth: 120 }
-  ]
-  // data.id==9时 把addCol添加到table.columns中第二列，不等于时，把添加的列删除
-  if (data.id == 9) {
-    ElMessage.success("表头添加成功")
-    table.columns.splice(1, 0, ...addCol)
-  } else {
-    addCol.forEach(val => {
-      table.columns.map(item => {
-        if (item.prop == val.prop) {
-          table.columns.splice(1, 1)
-        }
-      })
-    })
-  }
 }
 </script>

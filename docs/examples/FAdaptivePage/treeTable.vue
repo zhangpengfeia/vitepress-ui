@@ -1,16 +1,16 @@
 <template>
-  <t-adaptive-page
+  <f-adaptive-page
+    :key="isKey"
+    ref="TreeTableRef"
     title="treeTable列表"
     row-key="path"
-    isTree
+    is-tree
     :table="table"
     :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
     :columns="table.columns"
-    :isShowPagination="false"
+    :is-show-pagination="false"
     align="left"
-    :key="isKey"
     :opts="opts"
-    ref="TreeTableRef"
     :default-expand-all="isExpandAll"
     @selection-change="selectionChange"
     @submit="conditionEnter"
@@ -47,7 +47,7 @@
       <el-button size="default" type="primary" @click="expandRow(6, true)">展开第七行</el-button>
       <el-button size="default" type="primary" @click="expandRow(6, false)">收起第七行</el-button>
     </template>
-  </t-adaptive-page>
+  </f-adaptive-page>
 </template>
 
 <script setup lang="tsx">
