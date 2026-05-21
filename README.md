@@ -1,9 +1,5 @@
 # FF-ui-Plus
 
-## [FF-ui-Plus 使用 Demo 项目](https://github.com/wocwin/wocwin-admin)
-
-> `wocwin-admin`是基于 Vue3.3、TypeScript、Vite4、Pinia、Element-Plus 开源的一套后台管理模板；此项目全面使用了`FF-ui-Plus`二次封装基础组件库
-
 ## 介绍
 
 > 基于 vue3+ ts+ Element-plus 二次封装组件
