@@ -1,8 +1,8 @@
 {
-  "name": "@zhagnpengfeia/ff-ui-plus",
+  "name": "@zhangpengfeia/ff-ui-plus",
   "version": "2.0.7",
   "description": "Vue3 中基于Element-plus二次封装基础组件文档",
-  "author": "zhagnpengfeia",
+  "author": "zhangpengfeia",
   "license": "MIT",
   "private": false,
   "workspaces": {
@@ -127,9 +127,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhagnpengfeia/ff-ui-plus.git"
+    "url": "https://github.com/zhangpengfeia/ff-ui-plus.git"
   },
-  "homepage": "https://zhagnpengfeia.github.io/ff-ui-plus/",
+  "homepage": "https://zhangpengfeia.github.io/ff-ui-plus/",
   "keywords": [
     "element-ui",
     "element-plus",
