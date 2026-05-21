@@ -2,27 +2,27 @@
 
 ## 使用包管理器 <el-tag  effect="dark">推荐</el-tag>
 
-**建议您使用包管理器 ([pnpm](https://pnpm.io/)<el-tag  effect="dark">推荐</el-tag> ， [yarn](https://classic.yarnpkg.com/lang/en/)，[npm](https://www.npmjs.com/)) 安装 @zhangpengfeia/ff-ui-plus**。
+**建议您使用包管理器 ([pnpm](https://pnpm.io/)<el-tag  effect="dark">推荐</el-tag> ， [yarn](https://classic.yarnpkg.com/lang/en/)，[npm](https://www.npmjs.com/)) 安装 ff-ui-plus**。
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @zhangpengfeia/ff-ui-plus -S
+pnpm install ff-ui-plus -S
 ```
 
 ```sh [yarn]
-yarn add @zhangpengfeia/ff-ui-plus
+yarn add ff-ui-plus
 ```
 
 ```sh [npm]
-npm install @zhangpengfeia/ff-ui-plus    -S
+npm install ff-ui-plus    -S
 ```
 
 :::
 
 ## 浏览器直接引入
 
-直接通过浏览器的 HTML 标签导入 @zhangpengfeia/ff-ui-plus，然后就可以使用全局变量 `TuiPlus` 了。
+直接通过浏览器的 HTML 标签导入 ff-ui-plus，然后就可以使用全局变量 `TuiPlus` 了。
 
 根据不同的 CDN 提供商有不同的引入方式， 我们在这里以[unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) 举例。 你也可以使用其它的 CDN 供应商。
 
@@ -38,9 +38,9 @@ npm install @zhangpengfeia/ff-ui-plus    -S
   <script src="//unpkg.com/element-plus"></script>
 
   <!-- 导入t-ui-plus样式 -->
-  <link rel="stylesheet" href="//unpkg.com/@zhangpengfeia/ff-ui-plus/index.css" />
+  <link rel="stylesheet" href="//unpkg.com/ff-ui-plus/index.css" />
   <!--导入t-ui-plus"  -->
-  <script src="//unpkg.com/@zhangpengfeia/ff-ui-plus"></script>
+  <script src="//unpkg.com/ff-ui-plus"></script>
 </head>
 ```
 
@@ -56,9 +56,9 @@ npm install @zhangpengfeia/ff-ui-plus    -S
   <script src="//cdn.jsdelivr.net/npm/element-plus"></script>
 
   <!-- 导入t-ui-plus样式 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@zhangpengfeia/ff-ui-plus/index.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ff-ui-plus/index.css" />
   <!--导入t-ui-plus"  -->
-  <script src="//cdn.jsdelivr.net/npm/@zhangpengfeia/ff-ui-plus"></script>
+  <script src="//cdn.jsdelivr.net/npm/ff-ui-plus"></script>
 </head>
 ```
 

@@ -12,17 +12,17 @@
 
 ### 安装
 
-**建议您使用包管理器 ([pnpm](https://pnpm.io/)<el-tag  effect="dark">推荐</el-tag> ， [yarn](https://classic.yarnpkg.com/lang/en/)，[npm](https://www.npmjs.com/)) 安装 @zhangpengfeia/ff-ui-plus**。
+**建议您使用包管理器 ([pnpm](https://pnpm.io/)<el-tag  effect="dark">推荐</el-tag> ， [yarn](https://classic.yarnpkg.com/lang/en/)，[npm](https://www.npmjs.com/)) 安装 ff-ui-plus**。
 
 ```shell
 // 使用pnpm
-pnpm install @zhangpengfeia/ff-ui-plus -S
+pnpm install ff-ui-plus -S
 
 // 使用npm
-npm install @zhangpengfeia/ff-ui-plus -S
+npm install ff-ui-plus -S
 
 // 使用yarn
-yarn add @zhangpengfeia/ff-ui-plus
+yarn add ff-ui-plus
 ```
 
 ## 全局注册使用
@@ -38,12 +38,12 @@ import "element-plus/dist/index.css"
 import "element-plus/theme-chalk/dark/css-vars.css"
 // import en from 'element-plus/es/locale/lang/en' // 引入element-plus语言包 en--不建议固定设置
 import zhCn from "element-plus/es/locale/lang/zh-cn" // 引入element-plus语言包 zh-cn--不建议固定设置
-import plusZhCn from "@zhangpengfeia/ff-ui-plus/locale/zh-cn" // 引入ff-ui-plus语言包 zh-cn--不建议固定设置
-// import plusEn from '@zhangpengfeia/ff-ui-plus/locale/en' // 引入ff-ui-plus语言包 en--不建议固定设置
+import plusZhCn from "ff-ui-plus/locale/zh-cn" // 引入ff-ui-plus语言包 zh-cn--不建议固定设置
+// import plusEn from 'ff-ui-plus/locale/en' // 引入ff-ui-plus语言包 en--不建议固定设置
 // element-plus图标
 import * as ElementPlusIconsVue from "@element-plus/icons-vue"
-import TuiPlus from "@zhangpengfeia/ff-ui-plus"
-import "@zhangpengfeia/ff-ui-plus/index.css"
+import TuiPlus from "ff-ui-plus"
+import "ff-ui-plus/index.css"
 const app = createApp(App)
 // 注册所有图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -62,10 +62,10 @@ app.mount("#app")
 
 ```js
 // 在main.js中按下引入
-import "@zhangpengfeia/ff-ui-plus/index.css"
+import "ff-ui-plus/index.css"
 // 单个.vue文件引入
 ;<script setup lang="ts">
-  import {(TDetail, TForm)} from "@zhangpengfeia/ff-ui-plus"
+  import {(TDetail, TForm)} from "ff-ui-plus"
 </script>
 ```
 
@@ -81,8 +81,8 @@ import "@zhangpengfeia/ff-ui-plus/index.css"
   import { useGlobalStore } from "@/store/modules/global" // 引入pinia全局状态管理
   import en from "element-plus/es/locale/lang/en"
   import zhCn from "element-plus/es/locale/lang/zh-cn"
-  import plusZhCn from "@zhangpengfeia/ff-ui-plus/locale/zh-cn"
-  import plusEn from "@zhangpengfeia/ff-ui-plus/locale/en"
+  import plusZhCn from "ff-ui-plus/locale/zh-cn"
+  import plusEn from "ff-ui-plus/locale/en"
 
   const zhCnLocales = {
     ...zhCn,
@@ -100,7 +100,7 @@ import "@zhangpengfeia/ff-ui-plus/index.css"
 
 ## 浏览器直接引入
 
-直接通过浏览器的 HTML 标签导入 @zhangpengfeia/ff-ui-plus，然后就可以使用全局变量 `TuiPlus` 了。
+直接通过浏览器的 HTML 标签导入 ff-ui-plus，然后就可以使用全局变量 `TuiPlus` 了。
 
 根据不同的 CDN 提供商有不同的引入方式， 我们在这里以[unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) 举例。 你也可以使用其它的 CDN 供应商。
 
@@ -116,9 +116,9 @@ import "@zhangpengfeia/ff-ui-plus/index.css"
   <script src="//unpkg.com/element-plus"></script>
 
   <!-- 导入ff-ui-plus样式 -->
-  <link rel="stylesheet" href="//unpkg.com/@zhangpengfeia/ff-ui-plus/index.css" />
+  <link rel="stylesheet" href="//unpkg.com/ff-ui-plus/index.css" />
   <!--导入ff-ui-plus"  -->
-  <script src="//unpkg.com/@zhangpengfeia/ff-ui-plus"></script>
+  <script src="//unpkg.com/ff-ui-plus"></script>
 </head>
 ```
 
@@ -134,9 +134,9 @@ import "@zhangpengfeia/ff-ui-plus/index.css"
   <script src="//cdn.jsdelivr.net/npm/element-plus"></script>
 
   <!-- 导入ff-ui-plus样式 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@zhangpengfeia/ff-ui-plus/index.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ff-ui-plus/index.css" />
   <!--导入ff-ui-plus"  -->
-  <script src="//cdn.jsdelivr.net/npm/@zhangpengfeia/ff-ui-plus"></script>
+  <script src="//cdn.jsdelivr.net/npm/ff-ui-plus"></script>
 </head>
 ```
 
@@ -173,7 +173,7 @@ import "@zhangpengfeia/ff-ui-plus/index.css"
 // 需要在使用的项目的tsconfig.json文件中添加以下
 compilerOptions：{
   "types": [
-      "@zhangpengfeia/ff-ui-plus/index.d.ts"
+      "ff-ui-plus/index.d.ts"
     ],
 }
 

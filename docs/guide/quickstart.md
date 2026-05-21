@@ -13,12 +13,12 @@ import "element-plus/dist/index.css"
 import "element-plus/theme-chalk/dark/css-vars.css"
 // import en from 'element-plus/es/locale/lang/en' // 引入element-plus语言包 en
 import zhCn from "element-plus/es/locale/lang/zh-cn" // 引入element-plus语言包 zh-cn
-import plusZhCn from "@zhangpengfeia/ff-ui-plus/locale/zh-cn" // 引入ff-ui-plus语言包 zh-cn
-// import plusEn from '@zhangpengfeia/ff-ui-plus/locale/en' // 引入ff-ui-plus语言包 en
+import plusZhCn from "ff-ui-plus/locale/zh-cn" // 引入ff-ui-plus语言包 zh-cn
+// import plusEn from 'ff-ui-plus/locale/en' // 引入ff-ui-plus语言包 en
 // element-plus图标
 import * as ElementPlusIconsVue from "@element-plus/icons-vue"
-import TuiPlus from "@zhangpengfeia/ff-ui-plus"
-import "@zhangpengfeia/ff-ui-plus/index.css"
+import TuiPlus from "ff-ui-plus"
+import "ff-ui-plus/index.css"
 const app = createApp(App)
 // 注册所有图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -37,10 +37,10 @@ app.mount("#app")
 
 ```js
 // 在main.js中按下引入
-import "@zhangpengfeia/ff-ui-plus/index.css"
+import "ff-ui-plus/index.css"
 // 单个.vue文件引入
 ;<script setup lang="ts">
-  import {(TDetail, TForm)} from "@zhangpengfeia/ff-ui-plus"
+  import {(TDetail, TForm)} from "ff-ui-plus"
 </script>
 ```
 
@@ -53,7 +53,7 @@ import "@zhangpengfeia/ff-ui-plus/index.css"
 {
   "compilerOptions": {
     // ...
-    "types": ["@zhangpengfeia/ff-ui-plus/index.d.ts"]
+    "types": ["ff-ui-plus/index.d.ts"]
   }
 }
 ```

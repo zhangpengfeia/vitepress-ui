@@ -1,5 +1,5 @@
 {
-  "name": "@zhangpengfeia/ff-ui-plus",
+  "name": "ff-ui-plus",
   "version": "2.0.7",
   "publishConfig": {
     "access": "public"

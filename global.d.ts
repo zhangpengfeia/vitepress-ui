@@ -1,27 +1,27 @@
 // GlobalComponents for Volar
-declare module '@vue/runtime-core' {
+declare module "@vue/runtime-core" {
   export interface GlobalComponents {
-    TLayoutPage: typeof import('@zhangpengfeia/ff-ui-plus') ['TLayoutPage']
-    TLayoutPageItem: typeof import('@zhangpengfeia/ff-ui-plus') ['TLayoutPageItem']
-    TQueryCondition: typeof import('@zhangpengfeia/ff-ui-plus') ['TQueryCondition']
-    TTable: typeof import('@zhangpengfeia/ff-ui-plus') ['TTable']
-    TForm: typeof import('@zhangpengfeia/ff-ui-plus') ['TForm']
-    TSelect: typeof import('@zhangpengfeia/ff-ui-plus') ['TSelect']
-    TSelectTable: typeof import('@zhangpengfeia/ff-ui-plus') ['TSelectTable']
-    TDetail: typeof import('@zhangpengfeia/ff-ui-plus') ['TDetail']
-    TButton: typeof import('@zhangpengfeia/ff-ui-plus') ['TButton']
-    TStepWizard: typeof import('@zhangpengfeia/ff-ui-plus') ['TStepWizard']
-    TTimerBtn: typeof import('@zhangpengfeia/ff-ui-plus') ['TTimerBtn']
-    TModuleForm: typeof import('@zhangpengfeia/ff-ui-plus') ['TModuleForm']
-    TAdaptivePage: typeof import('@zhangpengfeia/ff-ui-plus') ['TAdaptivePage']
-    TDatePicker: typeof import('@zhangpengfeia/ff-ui-plus') ['TDatePicker']
-    TChart: typeof import('@zhangpengfeia/ff-ui-plus') ['TChart']
-    TCheckbox: typeof import('@zhangpengfeia/ff-ui-plus') ['TCheckbox']
-    FFInput: typeof import('@zhangpengfeia/ff-ui-plus') ['FFInput']
-    TRadio: typeof import('@zhangpengfeia/ff-ui-plus') ['TRadio']
-    TSelectIcon: typeof import('@zhangpengfeia/ff-ui-plus') ['TSelectIcon']
-    TTabs: typeof import('@zhangpengfeia/ff-ui-plus') ['TTabs']
+    TLayoutPage: typeof import("ff-ui-plus")["TLayoutPage"]
+    TLayoutPageItem: typeof import("ff-ui-plus")["TLayoutPageItem"]
+    TQueryCondition: typeof import("ff-ui-plus")["TQueryCondition"]
+    TTable: typeof import("ff-ui-plus")["TTable"]
+    TForm: typeof import("ff-ui-plus")["TForm"]
+    TSelect: typeof import("ff-ui-plus")["TSelect"]
+    TSelectTable: typeof import("ff-ui-plus")["TSelectTable"]
+    TDetail: typeof import("ff-ui-plus")["TDetail"]
+    TButton: typeof import("ff-ui-plus")["TButton"]
+    TStepWizard: typeof import("ff-ui-plus")["TStepWizard"]
+    TTimerBtn: typeof import("ff-ui-plus")["TTimerBtn"]
+    TModuleForm: typeof import("ff-ui-plus")["TModuleForm"]
+    TAdaptivePage: typeof import("ff-ui-plus")["TAdaptivePage"]
+    TDatePicker: typeof import("ff-ui-plus")["TDatePicker"]
+    TChart: typeof import("ff-ui-plus")["TChart"]
+    TCheckbox: typeof import("ff-ui-plus")["TCheckbox"]
+    FFInput: typeof import("ff-ui-plus")["FFInput"]
+    TRadio: typeof import("ff-ui-plus")["TRadio"]
+    TSelectIcon: typeof import("ff-ui-plus")["TSelectIcon"]
+    TTabs: typeof import("ff-ui-plus")["TTabs"]
   }
 }
 
-export { }
+export {}
